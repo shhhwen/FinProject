@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇珍藝品鋪</title>
+    <link rel="stylesheet" href="center.css">
+    <style>
+        input[type="text"], input[type="email"],input[type="password"], input[type='submit'] ,select{
+            display: block !important;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="header">
+    <img class="header-logo" src="assets/image/aboutus/logo-name.jpg">
+    <div class="nav-title">
+      <ul class="nav-name">  
+          <li class="name"><a href="index.html">首頁</a>
+          <li class="name"><a href="product.html">所有商品</a>
+              <ul class="subname">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="decoration.html">裝飾</a></li>
+                <li><a href="wearing.html">飾品</a></li>
+                <li><a href="cookie.html">食品</a></li>
+              </ul>
+          </li>
+          <li class="name"><a href="aboutus.html">關於我們</a></li>
+          <li class="name"><a href="center.html">會員中心</a></li>
+      </ul>
+    </div>
+
+      <div class="header-links">
+        <a href="member.html">登入</a>
+        <span>|</span>
+        <a href="signup.html">註冊</a>
+        <span>|</span>
+        <a href="car.html">購物車</a>
+      </div>
+    </div>
+
+    <div class="tab_css">
+      <input id="member" type="radio" name="tab" checked="checked"/>
+      <label for="member">會員中心</label>
+      <div class="tab_content">
+        <div class="member">
+            <h1>Membership</h1>
+            <div class="profile">
+              <img src="assets/image/member/profile.png" id="profile">
+              <div class="profile-info">
+                <h3>黃金VIP會員</h3>
+                <div class="profile-info-bold">
+                  <p><b>會員姓名：</b></p>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="蕭宜家"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <p><b>會員暱稱：</b></p>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="1230Shuo_Yan"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <p><b>電子郵件：</b></p>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="treasuk427@gmail.com"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <p><b>常用地址：</b></p>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="新北市新莊區中正路108號"/>
+                  </div>
+                </div>
+                <hr>
+                <h3>帳號密碼</h3>
+                <div class="profile-info-bold">
+                  <p><b>會員帳號：</b></p>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="treasuk427@gmail.com"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <p><b>會員暱稱：</b></p>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="807maker"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <p><b>會員密碼：</b></p>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="Suk10022117_"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="button" class="cart">修改會員資訊</button>
+      </div>
+
+      <input id="order" type="radio" name="tab" />
+      <label for="order">訂單資料</label>
+      <div class="tab_content">
+        <div class="orders"> 
+            <h1>My orders</h1>
+            <p class="orders-type"><b>Product Types & Status</b></p>
+            <a href="details.html" class="history-orders">
+                <p>07/08/2024, 08:07</p>
+                <p class="his-order">Order number 100221170807</p>
+                <hr>
+                    <div class ="history-info">
+                        <img src="assets/image/wear/wear3.jpg" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>我也不知道</p>
+                            <p class="his-order">選項：就那一款啊</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price" style="color:black">NT$80</b></span></p>
+                        </div>
+                    </div>  
+                <hr>
+                    <div class ="history-info">
+                        <img src="assets/image/cookie/product2.jpg" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>可能是酷東西</p>
+                            <p class="his-order">選項：我想吃布丁</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：2&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price" style="color:black">NT$400</b></span></p>
+                        </div>
+                    </div>
+                <hr>
+            </a>
+            <a href="details.html" class="history-orders">
+                <br><br>
+                <p>21/04/2024, 04:21</p>
+                <p class="his-order">Order number 100221170421</p>
+                <hr>
+                    <div class ="history-info">
+                        <img src="assets/image/wear/wear4.jpg" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>就那個啊</p>
+                            <p class="his-order">選項：就那一款啊</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price" style="color:black">NT$80</b></span></p>
+                        </div>
+                    </div>
+                <hr>
+                    <div class ="history-info">
+                        <img src="assets/image/decoration/decoration2.jpg" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>就那個嘛</p>
+                            <p class="his-order">選項：就那一款啊</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price" style="color:black">NT$80</b></span></p>
+                        </div>
+                    </div>
+                <hr>
+                    <div class ="history-info">
+                        <img src="assets/image/decoration/decoration3-4.jpg" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>魔法小樹</p>
+                            <p class="his-order">選項：第四款</p>
+                      </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price" style="color:black">NT$120</b></span></p>
+                        </div>
+                    </div>
+                <hr>
+            </a>
+        </div>
+      </div>
+
+      <input id="comment" type="radio" name="tab" />
+      <label for="comment">我的評價</label>
+      <div class="tab_content">
+        <div class="orders"> 
+            <h1>My comments</h1>
+            <p class="orders-type"><b>Product Review</b></p>
+            <hr>
+            <br>
+            <div class="review">
+              <img src="assets/image/member/profile.png" >
+              <div class="review-info">
+                <p>4*****l</p>
+                <p>★★★★★</p>
+                <p>2024/08/07 08:07</p>
+              </div>
+            </div>
+            <a href="details.html" class="history-orders">
+            <div class="review-detail">
+              <div class ="history-info">
+                <img src="assets/image/wear/wear3.jpg" id="his-order">
+                <div class="history-information-text">
+                    <p><b>Purchase confirmed</b></p>
+                    <p>就那個啊</p>
+                </div>
+                <div class ="history-text">
+                    <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <p><b><span class="price" style="color:black">NT$80</b></span></p>
+                </div>
+            </div>
+            <hr>
+            <div class ="history-info">
+                <img src="assets/image/cookie/product2.jpg" id="his-order">
+                <div class="history-information-text">
+                    <p><b>Purchase confirmed</b></p>
+                    <p>還有這個</p>
+                </div>
+                <div class ="history-text">
+                    <p class="his-order">數量：2&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <p><b><span class="price" style="color:black">NT$400</b></span></p>
+                </div>
+            </div>
+            </a>
+          </div>
+          <br>
+          <hr>
+          <br>
+          <div class="review">
+            <img src="assets/image/member/profile.png" >
+            <div class="review-info">
+              <p>4*****l</p>
+              <p>★★★★★</p>
+              <p>2024/04/21 04:21</p>
+            </div>
+          </div>
+          <a href="details.html" class="history-orders">
+          <div class="review-detail">
+            <div class ="history-info">
+              <img src="assets/image/wear/wear4.jpg" id="his-order">
+              <div class="history-information-text">
+                  <p><b>Purchase confirmed</b></p>
+                  <p>我想買的東西</p>
+              </div>
+              <div class ="history-text">
+                  <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                  <p><b><span class="price" style="color:black">NT$80</b></span></p>
+              </div>
+          </div>
+          <hr>
+          <div class ="history-info">
+            <img src="assets/image/decoration/decoration2.jpg" id="his-order">
+            <div class="history-information-text">
+                <p><b>Purchase confirmed</b></p>
+                <p>可能是好吃的</p>
+            </div>
+            <div class ="history-text">
+                <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                <p><b><span class="price" style="color:black">NT$80</b></span></p>
+            </div>
+          </div>
+        <hr>
+        <div class ="history-info">
+            <img src="assets/image/decoration/decoration3-4.jpg" id="his-order">
+            <div class="history-information-text">
+                <p><b>Purchase confirmed</b></p>
+                <p>魔法小樹</p>
+            </div>
+            <div class ="history-text">
+                <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                <p><b><span class="price" style="color:black">NT$120</b></span></p>
+            </div>
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+    <footer>
+      &copy; 2024 蕭儀佳 游舒僅 吳世雯
+    </footer>
+    <script src="assets/js/index.js"></script>
+
+  </body>
+  </html>
