@@ -1,45 +1,130 @@
-/* Navigation */
-nav {
-    font-family: Arial;
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #141017;
-    z-index: 1000;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    background-color: #1d162a;
+    width: 100%;
+    height: 150px;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;    
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center; /* 垂直方向居中 */
+    padding: 0 20px;
 }
 
-nav a {
-    padding: 12px 10px;
-    margin: 10px;
-    display: inline-block;
-    text-decoration: none;
-    color: #8c65ed;
-    font-size: 20px;
-    transition: 0.3s ease-in-out;
-    border-bottom: 2px solid transparent;
+.logo {
+    margin: 50px;
+    height: 150px;
+    width: 150px;
 }
 
-nav a:hover {
-    color: #f1f1f1;
-    transform: scale(1.04);
-    border-bottom: 3px solid #f1f1f1;
+/* 修改 nav 樣式 */
+nav {
+    flex: 1; /* nav 填滿 header 剩餘空間 */
+    display: flex;
+    justify-content: space-evenly; /* 元素之間均分空間 */
+    align-items: center;
 }
 
-.vertical-line {  
-    display: inline-block;
-    border-left: 1px solid #d4a4ff;
-    margin: 20px 10px;
+.nav-item {
+    margin: 0 15px; /* 為其他 nav-item 添加左右間距 */
+    display: flex;
+    align-items: center; /* 垂直方向居中 */
+    position: relative; /* 設定父層為相對定位，讓絕對定位的子層依附於此 */
+}
+
+/* nav-item 文字樣式 */
+.nav-item a, 
+.nav-item span {
+    color: #c782fb; /* 字體顏色設為指定顏色 */
+    text-decoration: none; /* 移除文字底線 */
+    font-size: 20px; /* 字體大小 */
+    font-weight: bold; /* 加粗文字 */
+    padding: 0 10px; /* 增加文字間距 */
+}
+
+.nav-item ul {
+    display: none; /* 預設隱藏下拉選單 */
+    position: absolute; /* 絕對定位使選單出現在父元素下方 */
+    top: 100%; /* 將選單放置於父元素的下方 */
+    left: 50%; /* 將選單的左邊緣移動到父元素的正中央 */
+    transform: translateX(-50%); /* 將選單整體向左移動自身寬度的一半 */    background-color: #1d162a; /* 與背景一致 */
+    padding: 30px 0; /* 增加上下內邊距 */
+    border-radius: 5px; /* 添加圓角效果 */
+    z-index: 10; /* 確保選單層級較高 */
+    width: 180px;
+
+}
+
+.nav-item:hover ul {
+    display: block; /* 滑鼠懸停時顯示下拉選單 */
+}
+
+.nav-item ul li {
+    margin: 5px 0; /* 下拉選單項目的垂直間距 */
+    padding: 0 20px; /* 每個項目內文字與邊框的左右距離 */
+    color: #c782fb; /* 設定文字顏色 */
+    font-size: 16px; /* 設定文字大小 */
+    text-align: center; /* 文字靠左對齊 */
+    height: 60px; /* 每個選項的固定高度，根據需要調整 */
+}
+
+/* 將最後三個項目放入右邊區域 */
+nav .right-section {
+    display: flex;
+    gap: 20px; /* 每個元素之間的距離設為 20px */
+    margin-right: 10px; /* 與右邊邊界距離設為 50px */
+    align-items: center; /* 垂直方向居中 */
+}
+
+/*搜尋文字欄容器*/
+.search-container input {
+    background: none;
+    border: 1px solid rgb(240,240,240);
+    border-radius: 15px;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(240,240,240);
+    font-size: 15px;
+    padding: 0 5px;
+    color: transparent; /* 文字初始設為透明 */
+    border-color: transparent; /* 邊框初始設為透明 */
+    transition: opacity 0.2s, transform 0.2s, color 0.2s, border-color 0.2s;
+    opacity: 0; /* 隱藏輸入框 */
+    transform: translateX(65px); /* 向右移動出視野 */
+}
+
+.search-container:hover input {
+    opacity: 1; /* 顯示輸入框 */
+    transform: translateX(0); /* 回到原位 */
+    color: black; /* 顯示文字顏色 */
+    border-color: rgb(240,240,240); /* 顯示邊框顏色 */
+}
+
+
+.right-navbar-option span>img {
+    width: 30px;
     height: 30px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0; 
-    margin: 0; 
+.right-navbar-option:hover input {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+}
+
+/*Contact*/
+.right-section a>button{
+    padding: 9px 25px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
