@@ -2,116 +2,133 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #1d162a;
+    background-color: #1d162a(0,0,0,.5);
+    backdrop-filter: blur(50px);
     width: 100%;
-    height: 150px;
+    height: 90px;
     position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
-    align-items: center; /* 垂直方向居中 */
+    align-items: center;
     padding: 0 20px;
+    z-index: 1000; /* 確保導航欄位於最上層 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
 }
 
 .logo {
     margin: 50px;
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
 }
 
-/* 修改 nav 樣式 */
+/* 主導航欄樣式 */
 nav {
-    flex: 1; /* nav 填滿 header 剩餘空間 */
+    flex: 1;
     display: flex;
-    justify-content: space-evenly; /* 元素之間均分空間 */
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .nav-item {
-    margin: 0 15px; /* 為其他 nav-item 添加左右間距 */
+    margin: 0 15px;
     display: flex;
-    align-items: center; /* 垂直方向居中 */
-    position: relative; /* 設定父層為相對定位，讓絕對定位的子層依附於此 */
+    align-items: center;
+    position: relative;
 }
 
-/* nav-item 文字樣式 */
 .nav-item a, 
 .nav-item span {
-    color: #c782fb; /* 字體顏色設為指定顏色 */
-    text-decoration: none; /* 移除文字底線 */
-    font-size: 20px; /* 字體大小 */
-    font-weight: bold; /* 加粗文字 */
-    padding: 0 10px; /* 增加文字間距 */
+    color: #c782fb;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+    transition: color 0.3s ease;
 }
 
+.nav-item a:hover, 
+.nav-item span:hover {
+    color: #ffffff; /* 懸停時文字顏色變為白色 */
+}
+
+/* 下拉選單樣式 */
 .nav-item ul {
-    display: none; /* 預設隱藏下拉選單 */
-    position: absolute; /* 絕對定位使選單出現在父元素下方 */
-    top: 100%; /* 將選單放置於父元素的下方 */
-    left: 50%; /* 將選單的左邊緣移動到父元素的正中央 */
-    transform: translateX(-50%); /* 將選單整體向左移動自身寬度的一半 */    background-color: #1d162a; /* 與背景一致 */
-    padding: 30px 0; /* 增加上下內邊距 */
-    border-radius: 5px; /* 添加圓角效果 */
-    z-index: 10; /* 確保選單層級較高 */
+    display: none; /* 預設隱藏 */
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,.5); /* 使用半透明背景色 */
+    backdrop-filter: blur(50px); /* 添加模糊效果 */
+    padding: 20px 0;
+    border-radius: 5px;
+    z-index: 10;
     width: 180px;
-
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 添加阴影 */
 }
+
 
 .nav-item:hover ul {
-    display: block; /* 滑鼠懸停時顯示下拉選單 */
+    display: block; /* 滑鼠懸停時顯示 */
 }
 
 .nav-item ul li {
-    margin: 5px 0; /* 下拉選單項目的垂直間距 */
-    padding: 0 20px; /* 每個項目內文字與邊框的左右距離 */
-    color: #c782fb; /* 設定文字顏色 */
-    font-size: 16px; /* 設定文字大小 */
-    text-align: center; /* 文字靠左對齊 */
-    height: 60px; /* 每個選項的固定高度，根據需要調整 */
+    margin: 5px 0;
+    padding: 10px 20px;
+    color: #c782fb;
+    font-size: 16px;
+    text-align: center;
+    height: 60px;
+    line-height: 40px; /* 垂直居中文字 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-item ul li:hover::before {
+    width: 105%;
+}
+.nav-item ul li:hover {
+    background-color: #3a2e4d; /* 懸停時背景顏色改變 */
+    color: #ffffff; /* 提高文字對比 */
 }
 
-/* 將最後三個項目放入右邊區域 */
+/* 右側功能區域 */
 nav .right-section {
     display: flex;
-    gap: 20px; /* 每個元素之間的距離設為 20px */
-    margin-right: 10px; /* 與右邊邊界距離設為 50px */
-    align-items: center; /* 垂直方向居中 */
+    gap: 20px;
+    margin-right: 10px;
+    align-items: center;
 }
 
-/*搜尋文字欄容器*/
+/* 搜尋欄樣式 */
+.search-container {
+    position: relative;
+}
+
 .search-container input {
     background: none;
-    border: 1px solid rgb(240,240,240);
+    border: 1px solid rgb(240, 240, 240);
     border-radius: 15px;
     width: 150px;
     height: 30px;
-    background-color: rgb(240,240,240);
+    background-color: rgb(240, 240, 240);
     font-size: 15px;
     padding: 0 5px;
-    color: transparent; /* 文字初始設為透明 */
-    border-color: transparent; /* 邊框初始設為透明 */
-    transition: opacity 0.2s, transform 0.2s, color 0.2s, border-color 0.2s;
-    opacity: 0; /* 隱藏輸入框 */
-    transform: translateX(65px); /* 向右移動出視野 */
+    color: transparent;
+    border-color: transparent;
+    transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    opacity: 0;
+    transform: translateX(65px);
 }
 
 .search-container:hover input {
-    opacity: 1; /* 顯示輸入框 */
-    transform: translateX(0); /* 回到原位 */
-    color: black; /* 顯示文字顏色 */
-    border-color: rgb(240,240,240); /* 顯示邊框顏色 */
-}
-
-
-.right-navbar-option span>img {
-    width: 30px;
-    height: 30px;
-}
-
-.right-navbar-option:hover input {
     opacity: 1;
     transform: translateX(0);
+    color: black;
+    border-color: rgb(240, 240, 240);
 }
 
 .icon {
@@ -119,12 +136,54 @@ nav .right-section {
     width: 30px;
 }
 
-/*Contact*/
-.right-section a>button{
+/* 按鈕樣式 */
+.right-section a > button {
     padding: 9px 25px;
     background-color: #ffffff;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease;
+}
+
+.right-section a > button:hover {
+    background-color: #f1f1f1;
+    transform: scale(0.95);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* 隱藏導航欄 */
+    }
+
+    .hamburger-menu {
+        display: block; /* 顯示漢堡圖示 */
+        cursor: pointer;
+    }
+
+    .right-section {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 100px; /* 減小導航欄高度 */
+        padding: 0 10px;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+    }
+
+    .search-container input {
+        width: 100px; /* 縮小搜索欄寬度 */
+    }
+
+    .right-section {
+        gap: 10px;
+    }
 }
