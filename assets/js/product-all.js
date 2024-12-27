@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${product.image}" alt="">
                     <h2>${product.name}</h2>
                     <div class="price">$${product.price}</div>
-                    <button class="addCart">Add To Cart</button>`;
+                    <button class="addCart">加入購物車</button>`;
                 listProductHTML.appendChild(newProduct);
             });
         }
