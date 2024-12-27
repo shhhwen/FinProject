@@ -22,18 +22,23 @@ body {
   flex-direction: column; /* 垂直布局，包括标题和内容 */
   align-items: center; /* 水平居中 */
   overflow-y: auto; /* 允许页面滚动 */
-  cursor: url("../img/mouse/mouse2.png") 16 16, auto;
+  cursor: url("homepageImg/mouse2.png") 16 16, auto;
 
+}
+
+.title {
+  text-align: center;
 }
 
 .title.title1 {
-  text-align: center;
   margin-top: 100px;
 }
-.title {
-  text-align: center;
-  margin: 10px 0;
+
+.title2 {
+  padding: 50px;
+  padding-bottom: 300P;
 }
+
 
 .title h1 {
   font-size: 36px;
@@ -109,122 +114,23 @@ body {
 main {
   width: 70%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 默认三列 */
-  grid-gap: 20px; /* 每个卡片之间的间距 */
-  margin: auto; /* 自动上下左右居中 */
-  justify-content: center; /* 卡片水平居中 */
-  align-items: center; /* 卡片垂直居中 */
-  min-height: 100vh; /* 确保 main 区域占满页面高度 */
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; 
+  margin: auto; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.card {
-  background-color: rgb(221, 224, 234);
-  padding: 20px;
-  margin: 10px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #333; 
-  overflow: hidden; /* 防止超出内容顯示 */
-  position: relative; 
-  color: #d3e4ea;
+.intro{
+  height: auto; 
+  width: 60%;
+  transition: transform 0.3s ease;
 }
-.card::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #403a42;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
+.intro:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
-
-.card::before {
-  content: "";
-  background: linear-gradient(45deg,
-   #d02323, #d78543, #dedb3a, #57c32d,
-    #26b19a, #394cab, #d217aa, #d26666);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  background-size: 600%;
-  z-index: -1;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  filter: blur(8px);
-  animation: glowing 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-  opacity: 0;
-}
-.card:hover::before{
-  opacity: 1;
-}
-.card:active::after{
-  background: transparent;
-}
-.card:active{
-  color: #d3e2ea;
-}
-
-.card img {
-  max-width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.card h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #797077; 
-}
-
-.card p {
-  font-size: 16px;
-  color: #e2dee0;
-  opacity: 0; /* 初始隐藏 */
-  transform: translateY(20px); /* 初始位置向下偏移 */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* 添加平滑动画 */
-  margin-top: 10px;
-}
-
-.card:hover p {
-  opacity: 1; /* 鼠标悬停时显示 */
-  transform: translateY(0); /* 恢复到原位 */
-}
-.card p {
-  font-size: 16px;
-  color: #e2dee0;
-  opacity: 0; /* 初始隐藏 */
-  transform: translateY(20px); /* 初始位置向下偏移 */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* 添加平滑动画 */
-  margin-top: 10px;
-}
-
-.card:hover p {
-  opacity: 1; /* 鼠标悬停时显示 */
-  transform: translateY(0); /* 恢复到原位 */
-}
-
-.card:hover {
-  transform: translateY(-10px); /* 悬停时向上移动 */
-  box-shadow: 
-    0 0 10px #ff0000, /* 紅色外光 */
-    0 0 20px #d78543, /* 橙色外光 */
-    0 0 30px #dedb3a, /* 黃色外光 */
-    0 0 40px #57c32d, /* 綠色外光 */
-    0 0 50px #26b19a, /* 青色外光 */
-    0 0 60px #394cab, /* 藍色外光 */
-    0 0 70px #d217aa, /* 紫色外光 */
-    0 0 80px #d26666; /* 淺紅色外光 */
-  color: #d3e2ea;
-}
-
-
-
 
 @media (max-width: 768px) {
   main {
@@ -252,20 +158,5 @@ main {
   main {
     grid-template-columns: 1fr; /* 小屏幕改为单列布局 */
     width: 90%; /* 内容宽度适配屏幕 */
-  }
-}
-
-/*光動來動去的動畫*/
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 600% 0; }
-  100% { background-position: 0 0; }
-}
-@keyframes borderScroll {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 300% 0;
   }
 }
