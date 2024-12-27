@@ -13,7 +13,7 @@ html, body {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  background-image: url('homepageImg/backgr.png'), linear-gradient(to top, #11052f 0%, #06192a 100%);
+  background-image: url('../img/backgr.png'), linear-gradient(to top, #11052f 0%, #06192a 100%);
   background-size: cover, cover; /* 确保两层背景都覆盖 */
   background-position: center, center; /* 背景居中 */
   background-repeat: no-repeat, no-repeat; /* 防止背景重复 */
@@ -22,7 +22,7 @@ body {
   flex-direction: column; /* 垂直布局，包括标题和内容 */
   align-items: center; /* 水平居中 */
   overflow-y: auto; /* 允许页面滚动 */
-  cursor: url("homepageImg/mouse2.png") 16 16, auto;
+  cursor: url("../img/mouse/mouse2.png") 16 16, auto;
 
 }
 

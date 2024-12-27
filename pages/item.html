@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/item.css">
+    <script src="../assets/js/item.js"></script>
+
+
+</head>
+<body>
+
+    <main>
+        <div class="introduce">
+            <div class="image">
+                    <img src="../assets/img/products/goods1.png" style="width:450px;">              
+            </div>
+            <div class="title">
+                <div class="titpro">
+                    <p class="title_a">Forget juice<br>遺忘汁</p>
+                    <p class="proprice">NT$1,350</p>
+                </div>
+                <p class="title_c">庫存：10</p>
+                <div class="shopping">
+                    <input type="button" value="-" class="btn" onclick="minus(0)">
+                    <input type="text" value="1" class="input_num">
+                    <input type="button" value="+" class="btn" onclick="add(0)">
+                    <a href="shoppingcart.html"><input type="button" value="加入購物車" class="button_shop"></a>
+                    <a href="shoppingcart.html"><input type="button" value="立即購買" class="button_shop"></a>
+                </div>
+
+                <p class="title_b">功效</p>
+                <p class="title_c">不小心看了什麼傷眼睛的東西就可以喝一口保護眼睛和腦袋</p>
+                <p class="title_b">內容物</p>
+                <p class="title_c">哥布林肝臟<br>
+                    忘憂草<br>
+                    妖精閃粉<br>
+                </p>
+            </div>
+        </div>
+
+        <section class="hot">
+            <hr class="hr-solid-content" data-content="推薦商品">
+            <div class="otherItem">
+                <div class="item1">
+                    <div class="itemph2"><img src="../assets/img/products/goods2.png"></div>
+                    <div class="besttxt">Mandragora<br>曼德拉草<br><br>NT$ 1,980</div>
+                </div>
+                <div class="item1">
+                    <div class="itemph2"><img src="../assets/img/products/goods3.png"></div>
+                    <div class="besttxt">What Flower<br>這啥花<br><br>NT$ 1,580</div>
+                </div>
+                <div class="item1">
+                    <div class="itemph2"><img src="../assets/img/products/goods4.png"></div>
+                    <div class="besttxt">Familiar Egg<br>使魔的蛋<br><br>NT$ 2,380</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="comment">
+            <div class="board">
+                <div class="boardtit">
+                    評論區
+                </div>
+                <div class="content">
+                    <div class="memic">
+                        <img src="../assets/img/test-can delete.jpg" class="memberIcon">
+                        <span class="memberName">哥不靈</span>
+                        <span class="memberStar">★★★★☆</span>
+                    </div>
+                    <div class="message">
+                        歐吼很讚
+                        <hr>
+                    </div>
+                    <div class="memic">
+                        <img src="../assets/img/test-can delete.jpg" class="memberIcon">
+                        <span class="memberName">蒸扇美</span>
+                        <span class="memberStar">★★★★☆</span>
+                    </div>
+                    <div class="message">
+                        Verrry GOOOOOOOOD
+                        <hr>
+                    </div>
+                    <div class="memic">
+                        <img src="../assets/img/test-can delete.jpg" class="memberIcon">
+                        <span class="memberName">肚子餓了</span>
+                        <span class="memberStar">★★★★☆</span>
+                    </div>
+                    <div class="message">
+                        肚子不餓了
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="sendComment">
+                <div class="boardtit">
+                    留言
+                </div>
+                <form>
+                    <input type="text" placeholder="暱稱" class="name">
+                    <hr><br>
+                    <textarea cols="30" rows="10" placeholder="想說啥..."></textarea><br>
+                    <div class="star">
+                        <input type="radio" name="star" value="5" id="5"><label for="5">☆</label>
+                        <input type="radio" name="star" value="4" id="4"><label for="4">☆</label>
+                        <input type="radio" name="star" value="3" id="3"><label for="3">☆</label>
+                        <input type="radio" name="star" value="2" id="2"><label for="2">☆</label>
+                        <input type="radio" name="star" value="1" id="1"><label for="1">☆</label>
+                    </div>
+                    <br>
+                    <input type="button" value="送出" class="send">
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

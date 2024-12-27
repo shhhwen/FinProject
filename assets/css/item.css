@@ -1,0 +1,402 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* 商品頁面 */
+body {
+    background-image: url('../img/backgr.png'), linear-gradient(to top, #11052f 0%, #06192a 100%);
+}
+
+.introduce {
+    width: 100%;
+    height: 700px;
+    padding-top: 200px;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* 右側介紹 */
+.title {
+    text-align: left;
+    width: 48%;
+    padding: 0 30px 30px 30px;
+    color: #f5ebff;
+}
+
+.titpro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.title_a {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.title_b {
+    font-size: 24px;
+    padding: 0px 0 0 10px;
+}
+
+.title_c {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.proprice {
+    font-size: 22px;
+    padding-right: 30px;
+}
+
+.price {
+    text-align: center;
+    background-color: #f5ebff;
+}
+
+.price p {
+    display: inline-block;
+}
+
+/* 數量加減 */
+.center {
+    text-align: center;
+}
+
+.number {
+    padding: 10px;
+}
+
+.input_num {
+    border: 0px;
+    text-align: center;
+    width: 60px;
+    margin: 0px;
+    height: 40px;
+    background-color: #f5ebff;
+    font-size: 15px;
+    color: #2a1c3f;
+}
+
+.btn {
+    border: 0px;
+    margin-right: 0px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    background-color: #b37ee8;
+    border-radius: 5px;
+    color: #2a1c3f;
+}
+
+.btn:hover {
+    background-color: #120b2c;
+    color: #f5ebff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 購物按鈕 */
+.shopping {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px 10px 28px 10px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #b37ee8;
+}
+
+.button_shop {
+    width: 230px;
+    height: 40px;
+    border: 2px solid;
+    border-color: #2a1c3f;
+    border-radius: 8px;
+    background-color: #b37ee8;
+    color: #2a1c3f;
+    margin: 0 0px 0 10px;
+    font-size: 15px;
+}
+
+.button_shop:hover {
+    background-color: #120b2c;
+    color: #f5ebff;
+    cursor: pointer;
+}
+
+
+/* 左側圖片 */
+.image {
+    width: 40%;
+    background-color: #f5ebff;
+
+}
+
+/*控制三個文字的樣式*/
+.img label[for="imgInput1"] {
+    left: 0;
+}
+
+.img label[for="imgInput2"] {
+    left: 30px;
+}
+
+/*當點擊按鈕文字時2，控制ul顯示的內容*/
+#imgInput1:checked~ul {
+    margin-left: 0;
+}
+
+#imgInput2:checked~ul {
+    margin-left: -450px;
+}
+
+/* 相關商品 */
+
+.hr-solid-content {
+    color: #120b2c;
+    border: 0;
+    font-size: 34px;
+    padding: 75px 0 40px 0;
+    position: relative;
+    margin-top: 40px;
+    font-family: 'Cormorant', serif;
+    font-weight: bolder;
+    
+  }
+
+.hr-solid-content::before {
+    content: attr(data-content);
+    position: absolute;
+    padding: 0 1ch;
+    line-height: 1px;
+    border: solid #120b2c;
+    border-width: 0 500px;
+    width: fit-content;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hot {
+    background-color: #f5ebff;
+    height: 720px;
+}
+
+.otherItem {
+    width: 90%;
+    height: 600px;
+    margin: 0% 5%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.item1{
+    margin: 0 35px 0 35px;
+    background-color: #120b2c;
+    height: 500px;
+    /* border-top-left-radius: 50%;
+    border-top-right-radius: 50%; */
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
+    transform:scale(1,1);
+    transition: all 0.2s ease-out;
+  
+  }
+  .item1:hover{
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
+    transform:scale(1.03,1.03);
+}
+  .item1 img{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;  
+  }
+  .itemph img{
+    width: 400px;
+    height: 400px;
+  }
+  .itemph2 img{
+    width: 350px;
+    height: 350px;
+  }
+  .besttxt{
+    text-align: center;
+    color: #f5ebff;
+    padding-top: 20px;
+    line-height: 1.5;
+    font-size: 17px;
+  }
+
+  /* 評論 */
+.boardtit{
+    font-family: 'Cormorant', serif;
+    color:#f5ebff; 
+    margin-bottom: 25px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+.comment {
+    width: 90%;
+    height: 550px;
+    margin: 5% 5% 0% 5%;
+    display: flex;
+    justify-content: space-evenly;
+    color: #f5ebff;
+}
+
+/* 評論區 */
+.board {
+    width: 450px;
+    height: 450px;
+    text-align: center;
+    background-color: #b37ee8;
+    padding: 30px 0 0 0;
+    color: #fefdf9;
+    border: 1px solid #fefdf9;
+    border-radius: 30px;
+}
+
+.board p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.content {
+    text-align: left;
+    padding-left: 45px;
+}
+
+.memberIcon {
+    width: 30px;
+    height: 30px;
+    margin: 0 6px 0 0;
+}
+
+.memic {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.memberName {
+    font-size: 15px;
+    margin: 0 6px 0 6px;
+}
+
+.memberStar {
+    font-size: 20px;
+    margin: 0 6px 0 6px;
+
+}
+
+.message {
+    margin: 13px 5px 10px 0;
+    font-size: 18px;
+}
+
+.message hr {
+    margin: 20px 40px 20px 0;
+    background-color: #fefdf9;
+    border: none;
+    height: 1px;
+}
+
+/* 輸入評論 */
+.sendComment {
+    background-color: #b37ee8;
+    width: 450px;
+    height: 450px;
+    text-align: center;
+    padding: 30px 0 0 0;
+    border-radius: 30px;
+    color: #fefdf9;
+}
+
+form {
+    text-align: center;
+
+}
+
+.name {
+    border: none;
+    width: 350px;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+form hr {
+    width: 240px;
+    margin-left: 80px;
+    border: 2px black;
+}
+
+form textarea {
+    margin-bottom: 3px;
+    resize: none;
+    width: 350px;
+    height: 160px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0 0 10px;
+    outline: none;
+}
+
+/* 星星評分 */
+.star {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0 0 10px;
+}
+
+.star input {
+    display: none;
+}
+
+.star label {
+    position: relative;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.star label::before {
+    content: "★";
+    position: absolute;
+    opacity: 0;
+}
+
+.star label:hover::before,
+.star label:hover~label:before {
+    opacity: 1;
+}
+
+.star input:checked~label:before {
+    opacity: 1;
+}
+
+.star:hover input:checked~label:before {
+    opacity: 0.4;
+}
+
+.send {
+    border-radius: 7%;
+    background-color: #120b2c;
+    border: none;
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    color: #fefdf9;
+    font-size: 17px;
+}
+
+.send:hover {
+    color: #5b3f78;
+    cursor: pointer;
+}
