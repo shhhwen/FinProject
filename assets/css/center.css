@@ -1,0 +1,260 @@
+/* 設置所有元素的字型、文字顏色及盒模型設定 */
+* {
+    font-family: 'Noto Serif TC', serif; /* 設定字型為 Noto Serif TC */
+    color: white; /* 設定文字顏色為白色 */
+    box-sizing: border-box; /* 避免 padding 和邊框影響元素大小 */
+}
+
+/* 設定 body 樣式，並確保頁面完整顯示 */
+body {
+    font-family: Arial, sans-serif; /* 設定字型為 Arial */
+    margin: 0; /* 取消默認的 margin */
+    padding: 0; /* 取消默認的 padding */
+    background-color: black; /* 設定背景顏色為黑色 */
+    width: 100vw; /* 設定寬度為 100% 的視口寬度 */
+    max-width: 100vw; /* 設定最大寬度為視口寬度 */
+    overflow-x: hidden; /* 禁止橫向滾動 */
+    padding-top: 90px; /* 上方留出空間，避免內容被覆蓋 */
+    display: flex; /* 使用 Flexbox 進行佈局 */
+    flex-direction: column; /* 垂直排列元素 */
+    min-height: 100vh; /* 確保頁面至少佔滿整個視窗高度 */
+}
+
+/* 使內容部分可撐開，讓 footer 固定在頁面底部 */
+.content {
+    flex: 1; /* 讓內容區塊可擴展，填滿剩餘空間 */
+}
+
+/* 設定名稱區塊的定位 */
+.name {
+    position: relative;
+}
+
+/* 設定導航名稱的樣式 */
+.nav-name a {
+    text-decoration: none; /* 移除超連結的下劃線 */
+    color: inherit; /* 繼承父元素的顏色 */
+    display: block; /* 讓超連結成為區塊元素 */
+    line-height: 30px; /* 設定行高 */
+}
+
+/* 設定 tab 的樣式 */
+.tab_css {
+    display: flex; /* 使用 Flexbox 排列 tab */
+    flex-wrap: wrap; /* 當空間不足時，允許換行 */
+    justify-content: center; /* 使 tab 水平居中 */
+    margin-top: 0%; /* 上方留出空間 */
+}
+
+/* 隱藏 tab 的 input 元素 */
+.tab_css input {
+    display: none; /* 隱藏 checkbox */
+}
+
+/* 設定 tab 標籤的樣式 */
+.tab_css label {
+    margin: 0 5px 5px 0; /* 設定邊距 */
+    padding: 10px 16px; /* 設定內邊距 */
+    cursor: pointer; /* 顯示為可點擊的樣式 */
+    border-radius: 5px; /* 設定圓角 */
+    background: purple; /* 設定背景顏色為紫色 */
+    color: #fff; /* 設定文字顏色為白色 */
+    opacity: 0.5; /* 設定透明度 */
+}
+
+/* 設定 tab 內容區塊的樣式 */
+.tab_content {
+    order: 1; /* 設定顯示順序 */
+    display: none; /* 初始隱藏內容 */
+    width: 100%; /* 內容區塊寬度設為 100% */
+    border-bottom: 3px solid #ddd; /* 下邊框 */
+    line-height: 1.6; /* 行高 */
+    font-size: .9em; /* 字體大小 */
+    padding: 15px; /* 內邊距 */
+    border: 1px solid #ddd; /* 邊框 */
+    border-radius: 5px; /* 圓角邊框 */
+}
+
+/* 當 checkbox 被選中或滑鼠懸停時，改變 tab 標籤的樣式 */
+.tab_css input:checked+label,
+.tab_css label:hover {
+    opacity: 1; /* 使標籤變為不透明 */
+    font-weight: bold; /* 設定加粗 */
+}
+
+/* 當 checkbox 被選中時，顯示對應的 tab 內容 */
+.tab_css input:checked+label+.tab_content {
+    display: initial; /* 顯示內容 */
+}
+
+/* 設定訂單區塊樣式 */
+.orders {
+    text-align: left; /* 文字左對齊 */
+    margin-left: 10%; /* 左邊距 */
+    margin-bottom: 50px; /* 增加底部間距，避免與 footer 重疊 */
+}
+
+/* 設定訂單類型的字型大小 */
+.orders-type {
+    text-align: left; /* 文字左對齊 */
+    font-size: 17px; /* 字體大小 */
+}
+
+/* 設定歷史訂單的樣式 */
+.history-orders {
+    margin-top: 2%; /* 上邊距 */
+    color: black; /* 文字顏色為黑色 */
+    text-decoration: none; /* 移除下劃線 */
+    margin-bottom: 50px; /* 增加底部間距，避免與 footer 重疊 */
+}
+
+/* 設定歷史訂單中的每一個項目的樣式 */
+.history-info {
+    display: flex; /* 使用 Flexbox 排列 */
+    line-height: 80px; /* 設定行高 */
+}
+
+/* 設定歷史訂單中的圖片大小 */
+.history-info img {
+    width: 8%; /* 設定寬度為 8% */
+    height: 8%; /* 設定高度為 8% */
+}
+
+/* 設定歷史訂單的分隔線樣式 */
+.history-orders-top hr {
+    width: 90%; /* 設定寬度為 90% */
+    line-height: 1.6; /* 行高 */
+    font-size: 2em; /* 字體大小 */
+    border: 20px solid rgba(221, 221, 221, 0.698); /* 設定邊框 */
+    margin-left: 0%; /* 左邊距為 0 */
+}
+
+/* 設定其他歷史訂單的分隔線樣式 */
+.history-orders hr {
+    width: 90%; /* 設定寬度為 90% */
+    line-height: 1.6; /* 行高 */
+    font-size: .9em; /* 字體大小 */
+    border: 1px solid #ddd; /* 設定邊框 */
+    margin-left: 0%; /* 左邊距為 0 */
+}
+
+/* 設定歷史訂單中的文字樣式 */
+.history-information-text {
+    margin-left: 2%; /* 左邊距 */
+}
+
+/* 設定歷史訂單的文字顯示方式 */
+.history-text {
+    display: flex; /* 使用 Flexbox 排列 */
+    margin-top: 2.5%; /* 上邊距 */
+    margin-left: 50%; /* 左邊距 */
+    font-size: 17px; /* 字體大小 */
+}
+
+/* 設定會員區塊的樣式 */
+.member {
+    text-align: left; /* 文字左對齊 */
+    margin-left: 10%; /* 左邊距 */
+}
+
+/* 設定個人資料區塊的樣式 */
+.profile {
+    display: flex; /* 使用 Flexbox 排列 */
+    margin-left: 10%; /* 左邊距 */
+    margin-top: 6%; /* 上邊距 */
+}
+
+/* 設定個人資料圖片的大小 */
+.profile img {
+    width: 13%; /* 設定寬度為 13% */
+    height: 13%; /* 設定高度為 13% */
+    border-radius: 50%; /* 設定圓形邊框 */
+}
+
+/* 設定個人資料輸入框的樣式 */
+.profile input {
+    margin-left: 10px; /* 左邊距 */
+    padding: 5px; /* 內邊距 */
+    font-size: 14px; /* 字體大小 */
+}
+
+/* 設定個人資料資訊區塊的樣式 */
+.profile-info {
+    margin-left: 10%; /* 左邊距 */
+    margin-top: -7%; /* 上邊距 */
+    margin-bottom: 12%;
+}
+
+/* 設定加粗的個人資料資訊區塊樣式 */
+.profile-info-bold {
+    display: flex; /* 使用 Flexbox 排列 */
+    border: 5px; /* 設定邊框 */
+}
+
+/* 設定加粗資料的輸入框樣式 */
+.profile-info-bold-input {
+    margin-top: 5%; /* 上邊距 */
+    height: 20px; /* 設定高度 */
+}
+/* 修改會員資料按鈕 */
+.cart {
+    display: inline-block; /* 設定為行內塊元素 */
+    width: 10%; /* 設定寬度為 10% */
+    padding: 10px; /* 內邊距 */
+    margin-top: 10px; /* 上邊距 */
+    margin-left: 70%; /* 左邊距 */
+    background-color: purple; /* 設定背景顏色為紫色 */
+    color: white; /* 設定文字顏色為白色 */
+    border: none; /* 移除邊框 */
+    cursor: pointer; /* 設定為可點擊的樣式 */
+    box-sizing: border-box; /* 設定盒模型 */
+    margin-bottom: 1%; /* 增加底部邊距 */
+}
+
+/* 設定 h3 標籤的樣式 */
+h3 {
+    text-align: center; /* 文字居中 */
+    margin-left: 50%; /* 左邊距 */
+}
+
+/* 設定個人資料分隔線的樣式 */
+.profile-info hr {
+    width: 245%; /* 設定寬度為 245% */
+    text-align: left; /* 左對齊 */
+}
+
+/* 設定評論區塊的樣式 */
+.review {
+    display: flex; /* 使用 Flexbox 排列 */
+}
+
+/* 設定評論中的圖片大小 */
+.review img {
+    width: 5%; /* 設定寬度為 5% */
+    height: 5%; /* 設定高度為 5% */
+}
+
+/* 設定評論資訊區塊的樣式 */
+.review-info {
+    margin-left: 1%; /* 左邊距 */
+    line-height: 110%; /* 行高 */
+}
+
+/* 設定評論詳細資料區塊的樣式 */
+.review-detail {
+    margin-left: 6%; /* 左邊距 */
+    border: 0.05px solid gray; /* 設定灰色邊框 */
+    padding: 1%; /* 內邊距 */
+    width: 81%; /* 設定寬度為 81% */
+}
+
+/* 設定訂單分隔線樣式 */
+.orders hr {
+    width: 90%; /* 設定寬度為 90% */
+    margin-left: 0%; /* 左邊距 */
+}
+
+/* 設定評論詳細資料中的分隔線樣式 */
+.review-detail hr {
+    width: 100%; /* 設定寬度為 100% */
+}
