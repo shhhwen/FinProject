@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奇珍藝品鋪 會員中心</title>
+    <link rel="stylesheet" href="center.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        input[type="text"], input[type="email"],input[type="password"], input[type='submit'] ,select{
+            display: block !important;
+            color: black; /* 設定文字顏色為黑色 */
+        }
+    </style>
+    <script src="center.js" defer></script>
+</head>
+
+<body>
+      <!--導覽列-->
+      <header>
+        <!--logo-->
+        <a href="放首頁連結"><img src="../assets/img/logo.png" class="logo"></a>
+        <nav>
+            <div class="nav-item"><a href="放連結">關於我們</a></div>
+            <div class="nav-item">
+                <span><a href="放連結">所有商品</a></span>
+                <ul>
+                    <li><a href="放連結">魔法藥水</a></li>
+                    <li><a href="放連結">魔法道具</a></li>
+                    <li><a href="放連結">魔法耗材</a></li>
+                    <li><a href="放連結">其他商品</a></li>
+                </ul>
+            </div>
+            <div class="nav-item"><a href="放關於我們連結" class="aboutus">聯繫我們</a></div>
+            <div class="nav-item">
+                <a href="放連結"><span>會員中心</span></a>
+            </div>
+            <!-- 搜尋 -->
+            <div class="right-section">
+                <div class="right-navbar-option">
+                    <form>
+                        <span class="search-container">
+                            <input type="text" name="search" placeholder="searching...">
+                        </span>
+                        <span>
+                            <img src="../assets/img/magnifier.png" class="icon">
+                        </span>
+                    </form>
+                </div>               
+                <div class="nav-item"><a href="放購物車連結"><img src="../assets/img/cart.png" class="icon"></a></div>
+                <div class="nav-item"><a href="放登入連結"><button>Log in</button></a></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="tab_css">
+      <input id="member" type="radio" name="tab" checked="checked"/>
+      <label for="member">會員中心</label>
+      <div class="tab_content">
+        <div class="member">
+            <h1>Membership</h1>
+            <div class="profile">
+              <img src="profile.jpg" id="profile">
+              <div class="profile-info">
+                <h3>會員資訊</h3>
+                <div class="profile-info-bold">
+                  <b>會員姓名：</b>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="蕭儀佳"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <b>會員暱稱：</b>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="1230yijia"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <b>電子郵件：</b>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="example@gmail.com"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <b>常用地址：</b>
+                  <div class="profile-info-bold-input">
+                    <input type="text" name="name" value="桃園市中壢區中北路200號"/>
+                  </div>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <h3>帳號密碼</h3>
+                <div class="profile-info-bold">
+                  <b>會員帳號：</b>
+                  <div class="profile-info-bold-input">
+                    <input type="text" id="account" name="name" placeholder="請輸入您的Gmail" value="example@gmail.com"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <b>會員暱稱：</b>
+                  <div class="profile-info-bold-input">
+                    <input type="text" id="nickname" placeholder="僅限英文字母、數字、底線和句點" name="name" value="1230yijia"/>
+                  </div>
+                </div>
+                <div class="profile-info-bold">
+                  <b>會員密碼：</b>
+                  <div class="profile-info-bold-input">
+                    <input type="text" id="password" name="name" placeholder="僅限英文字母和數字" value="11244111cyim"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button type="button" id="updateInfo" class="cart">修改會員資訊</button>
+      </div>
+
+      <input id="order" type="radio" name="tab" />
+      <label for="order">訂單資料</label>
+      <div class="tab_content">
+        <div class="orders"> 
+            <h1>My orders</h1>
+            <p class="orders-type"><b>Product Types & Status</b></p>
+            <a class="history-orders">
+                <p>30/12/2024, 12:30</p>
+                <p class="his-order">Order number 11212301230</p>
+                <hr>
+                    <div class ="history-info">
+                        <img src="遺忘汁圖片" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>遺忘汁</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price">NT$ 1,350</b></span></p>
+                        </div>
+                    </div>  
+                <hr>
+                    <div class ="history-info">
+                        <img src="使魔的蛋圖片" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>使魔的蛋</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price">NT$ 2,380</b></span></p>
+                        </div>
+                    </div>
+                <hr>
+            </a>
+            <a class="history-orders">
+                <br><br>
+                <p>14/07/2024, 07:14</p>
+                <p class="his-order">Order number 11207140714</p>
+                <hr>
+                    <div class ="history-info">
+                        <img src="曼德拉草圖片" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>曼德拉草</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price">NT$ 1,980</b></span></p>
+                        </div>
+                    </div>
+                <hr>
+                    <div class ="history-info">
+                        <img src="這啥花圖片" id="his-order">
+                        <div class="history-information-text">
+                            <p><b>Purchase confirmed</b></p>
+                            <p>這啥花</p>
+                        </div>
+                        <div class ="history-text">
+                            <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                            <p><b><span class="price">NT$ 1,580</b></span></p>
+                        </div>
+                    </div>
+            </a>
+        </div>
+      </div>
+
+      <input id="comment" type="radio" name="tab" />
+      <label for="comment">我的評價</label>
+      <div class="tab_content">
+        <div class="orders"> 
+            <h1>My comments</h1>
+            <p class="orders-type"><b>Product Review</b></p>
+            <hr>
+            <br>
+            <div class="review">
+              <img src="profile.jpg" >
+              <div class="review-info">
+                <p>1*****a</p>
+                <p>★★★★★</p>
+                <p>2024/12/30 12:30</p>
+              </div>
+            </div>
+            <a href="details.html" class="history-orders">
+            <div class="review-detail">
+              <div class ="history-info">
+                <img src="遺忘汁圖片" id="his-order">
+                <div class="history-information-text">
+                    <p><b>Purchase confirmed</b></p>
+                    <p>遺忘汁</p>
+                </div>
+                <div class ="history-text">
+                    <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <p><b><span class="price">NT$ 1,350</b></span></p>
+                </div>
+            </div>
+            <hr>
+            <div class ="history-info">
+                <img src="使魔的蛋圖片" id="his-order">
+                <div class="history-information-text">
+                    <p><b>Purchase confirmed</b></p>
+                    <p>使魔的蛋</p>
+                </div>
+                <div class ="history-text">
+                    <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                    <p><b><span class="price">NT$ 2,380</b></span></p>
+                </div>
+            </div>
+            </a>
+          </div>
+          <br>
+          <hr>
+          <br>
+          <div class="review">
+            <img src="profile.jpg" >
+            <div class="review-info">
+              <p>1*****a</p>
+              <p>★★★★★</p>
+              <p>2024/07/14 07:14</p>
+            </div>
+          </div>
+          <a href="details.html" class="history-orders">
+          <div class="review-detail">
+            <div class ="history-info">
+              <img src="曼德拉草圖片" id="his-order">
+              <div class="history-information-text">
+                  <p><b>Purchase confirmed</b></p>
+                  <p>曼德拉草</p>
+              </div>
+              <div class ="history-text">
+                  <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                  <p><b><span class="price">NT$ 1,980</b></span></p>
+              </div>
+          </div>
+          <hr>
+          <div class ="history-info">
+            <img src="這啥花圖片" id="his-order">
+            <div class="history-information-text">
+                <p><b>Purchase confirmed</b></p>
+                <p>這啥花</p>
+            </div>
+            <div class ="history-text">
+                <p class="his-order">數量：1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+                <p><b><span class="price">NT$ 1,580</b></span></p>
+            </div>
+          </div>
+      </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer>
+    <p>2024 © Copyright magic company</p>
+  </footer>
+
+  </body>
+  </html>
