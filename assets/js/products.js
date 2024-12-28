@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const mockData = [
-        { id: 1, name: "商品1", price: 200, image: "../assets/img/test-can delete.jpg" },
-        { id: 2, name: "商品2", price: 250, image: "../assets/img/test-can delete.jpg" },
-        { id: 3, name: "商品3", price: 300, image: "../assets/img/test-can delete.jpg" },
-        { id: 4, name: "商品4", price: 350, image: "../assets/img/test-can delete.jpg" },
-        { id: 5, name: "商品5", price: 400, image: "../assets/img/test-can delete.jpg" },
+        { id: 1, name: "商品1", price: 200, image: "../assets/img/products/goods1.png" },
+        { id: 2, name: "商品2", price: 250, image: "../assets/img/products/goods2.png" },
+        { id: 3, name: "商品3", price: 300, image: "../assets/img/products/goods3.png" },
+        { id: 4, name: "商品4", price: 350, image: "../assets/img/products/goods4.png" },
+        { id: 5, name: "商品5", price: 400, image: "../assets/img/products/goods5.png" },
     ];
 
     let products = mockData; // 初始化產品資料
@@ -86,9 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="name">${info.name}</div>
                     <div class="totalPrice">$${info.price * item.quantity}</div>
                     <div class="quantity">
-                        <span class="minus"><</span>
+                        <span class="minus">❮</span>
                         <span>${item.quantity}</span>
-                        <span class="plus">></span>
+                        <span class="plus">❯</span>
                     </div>`;
                 listCartHTML.appendChild(newItem);
             });

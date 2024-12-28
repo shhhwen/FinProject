@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+
+html, body {
+  height: 100%; /* 确保背景覆盖整个页面，包括溢出的内容 */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background-image: url('../img/backgr.png'), linear-gradient(to top, #11052f 0%, #06192a 100%);
+  background-size: cover, cover; /* 确保两层背景都覆盖 */
+  background-position: center, center; /* 背景居中 */
+  background-repeat: no-repeat, no-repeat; /* 防止背景重复 */
+  background-attachment: fixed; /* 背景固定，适应滚动 */
+  display: flex;
+  flex-direction: column; /* 垂直布局，包括标题和内容 */
+  align-items: center; /* 水平居中 */
+  overflow-y: auto; /* 允许页面滚动 */
+  cursor: url("homepageImg/mouse2.png") 16 16, auto;
+
+}
+
+.title {
+  text-align: center;
+}
+
+.title.title1 {
+  margin-top: 100px;
+}
+
+.title2 {
+  padding: 50px;
+  padding-bottom: 300P;
+}
+
+
+.title h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.title h2 {
+  font-size: 20px;
+  color: #ddd;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  align-items: center;
+  justify-content: center; /* 卡片水平居中 */
+  margin: 20px 0;
+}
+
+/* 保留之前的 .panel 和 main 样式 */
+
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transform: scale(0.9);
+  transition: flex 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.3s ease-in-out;
+  border: 2px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.panel:hover {
+  flex: 5;
+  transform: scale(1);
+  box-shadow: 0 10px 30px rgba(163, 24, 228, 1); /* 增强悬停时的阴影效果 */
+}
+
+.panel h1,
+.panel h2 {
+  position: absolute;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.panel h1 {
+  bottom: 60px;
+  font-size: 28px;
+  color: #ddd;
+}
+
+.panel h2 {
+  bottom: 20px;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.panel:hover h1,
+.panel:hover h2 {
+  opacity: 1;
+}
+
+main {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; 
+  margin: auto; 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.intro{
+  height: auto; 
+  width: 60%;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr); /* 中屏幕改为2列布局 */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* 垂直布局小屏幕更合适 */
+    width: 100vw;
+    align-items: stretch;
+  }
+
+  .panel {
+    flex: 1;
+    height: 60vh;
+    margin: 10px 0; /* 增加上下间距 */
+  }
+
+  .panel:hover {
+    flex: 1; /* 小屏幕下不需要大幅扩展 */
+  }
+
+  main {
+    grid-template-columns: 1fr; /* 小屏幕改为单列布局 */
+    width: 90%; /* 内容宽度适配屏幕 */
+  }
+}
