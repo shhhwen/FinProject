@@ -26,6 +26,10 @@ body {
 
 }
 
+.featured{
+  margin-top: 50px;
+}
+
 .title {
   text-align: center;
 }
@@ -37,6 +41,10 @@ body {
 .title2 {
   padding: 50px;
   padding-bottom: 300P;
+}
+
+.title2 h2{
+  margin-bottom: 50px;
 }
 
 
