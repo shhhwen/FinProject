@@ -35,11 +35,12 @@ body {
 }
 
 .title.title1 {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .title2 {
-  padding: 50px;
+  margin-top: -10px;
+  padding: 40px;
   padding-bottom: 300P;
 }
 
