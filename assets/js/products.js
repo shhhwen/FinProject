@@ -1,10 +1,10 @@
 // 商品數據（可以模擬或者從 API 獲取）
 const mockData = [
-    { id: 1, name: "商品1", price: 200, image: "../assets/img/products/goods1.png" },
-    { id: 2, name: "商品2", price: 250, image: "../assets/img/products/goods2.png" },
-    { id: 3, name: "商品3", price: 300, image: "../assets/img/products/goods3.png" },
-    { id: 4, name: "商品4", price: 350, image: "../assets/img/products/goods4.png" },
-    { id: 5, name: "商品5", price: 400, image: "../assets/img/products/goods5.png" },
+    { id: 1, name: "商品1", price: 200, image: "../assets/img/products/good1.png" },
+    { id: 2, name: "商品2", price: 250, image: "../assets/img/products/good2.png" },
+    { id: 3, name: "商品3", price: 300, image: "../assets/img/products/good3.png" },
+    { id: 4, name: "商品4", price: 350, image: "../assets/img/products/good4.png" },
+    { id: 5, name: "商品5", price: 400, image: "../assets/img/products/good5.png" },
 ];
 
 // 初始化商品數據
