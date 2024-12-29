@@ -1,10 +1,19 @@
 // 商品數據（可以模擬或者從 API 獲取）
 const mockData = [
-    { id: 1, name: "商品1", price: 200, image: "../assets/img/products/good1.png" },
-    { id: 2, name: "商品2", price: 250, image: "../assets/img/products/good2.png" },
-    { id: 3, name: "商品3", price: 300, image: "../assets/img/products/good3.png" },
-    { id: 4, name: "商品4", price: 350, image: "../assets/img/products/good4.png" },
-    { id: 5, name: "商品5", price: 400, image: "../assets/img/products/good5.png" },
+    { id: 1, name: "豹肝藥", price: 1500, image: "../assets/img/products/good1.png" },
+    { id: 2, name: "打嗝藥水", price: 450, image: "../assets/img/products/good2.png" },
+    { id: 3, name: "體溫調節藥水", price: 2150, image: "../assets/img/products/good3.png" },
+    { id: 4, name: "遺忘汁", price: 1450, image: "../assets/img/products/good4.png" },
+    { id: 5, name: "蜥蜴尾巴", price: 50, image: "../assets/img/products/good5.png" },
+    { id: 6, name: "魔力粉", price: 250, image: "../assets/img/products/good6.png" },
+    { id: 7, name: "兔子的腳", price: 600, image: "../assets/img/products/good7.png" },
+    { id: 8, name: "鳳凰羽毛", price: 300000, image: "../assets/img/products/good8.png" },
+    { id: 9, name: "古代恐龍的化石", price: 2500000, image: "../assets/img/products/good9.png" },
+    { id: 10, name: "靈光藍花", price: 3520, image: "../assets/img/products/good10.png" },
+    { id: 11, name: "魔法掃帚", price: 12900, image: "../assets/img/products/good11.png" },
+    { id: 12, name: "包你醒腦萬靈丹", price: 990, image: "../assets/img/products/good12.png" },
+    { id: 13, name: "記憶吐司(兩片裝)", price: 7900, image: "../assets/img/products/good13.png" },
+    { id: 14, name: "使魔的蛋", price: 99999, image: "../assets/img/products/good14.png" },
 ];
 
 // 初始化商品數據
