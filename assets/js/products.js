@@ -1,136 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mockData = [
-        { id: 1, name: "商品1", price: 200, image: "../assets/img/products/goods1.png" },
-        { id: 2, name: "商品2", price: 250, image: "../assets/img/products/goods2.png" },
-        { id: 3, name: "商品3", price: 300, image: "../assets/img/products/goods3.png" },
-        { id: 4, name: "商品4", price: 350, image: "../assets/img/products/goods4.png" },
-        { id: 5, name: "商品5", price: 400, image: "../assets/img/products/goods5.png" },
-    ];
+// 商品數據（可以模擬或者從 API 獲取）
+const mockData = [
+    { id: 1, name: "商品1", price: 200, image: "../assets/img/products/goods1.png" },
+    { id: 2, name: "商品2", price: 250, image: "../assets/img/products/goods2.png" },
+    { id: 3, name: "商品3", price: 300, image: "../assets/img/products/goods3.png" },
+    { id: 4, name: "商品4", price: 350, image: "../assets/img/products/goods4.png" },
+    { id: 5, name: "商品5", price: 400, image: "../assets/img/products/goods5.png" },
+];
 
-    let products = mockData; // 初始化產品資料
-    let cart = [];
+// 初始化商品數據
+let products = mockData;
 
-    const iconCart = document.querySelector('.icon-cart');
-    const body = document.querySelector('body');
-    const closeCart = document.querySelector('.close');
-    const listProductHTML = document.querySelector('.listProduct');
-    const listCartHTML = document.querySelector('.listCart');
-    const iconCartSpan = document.querySelector('.icon-cart span');
+// 選取 DOM 元素
+const listProductHTML = document.querySelector('.listProduct');
 
-    iconCart.addEventListener('click', () => {
-        body.classList.toggle('showCart');
-    });
+// 渲染商品到頁面
+const addDataToHTML = () => {
+    listProductHTML.innerHTML = ''; // 清空商品列表
+    if (products.length > 0) {
+        products.forEach(product => {
+            let newProduct = document.createElement('div'); // 創建商品容器
+            newProduct.dataset.id = product.id; // 設置商品 ID
+            newProduct.classList.add('item'); // 添加樣式類
+            newProduct.innerHTML = `
+                <img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>
+                <button class="addCart">加入購物車</button>`;
+            listProductHTML.appendChild(newProduct); // 添加到商品列表
+        });
+    }
+};
 
-    closeCart.addEventListener('click', () => {
-        body.classList.toggle('showCart');
-    });
-
-    const addDataToHTML = () => {
-        listProductHTML.innerHTML = '';
-        if (products.length > 0) {
-            products.forEach(product => {
-                let newProduct = document.createElement('div');
-                newProduct.dataset.id = product.id;
-                newProduct.classList.add('item');
-                newProduct.innerHTML = `
-                    <img src="${product.image}" alt="">
-                    <h2>${product.name}</h2>
-                    <div class="price">$${product.price}</div>
-                    <button class="addCart">加入購物車</button>`;
-                listProductHTML.appendChild(newProduct);
-            });
-        }
-    };
-
-    listProductHTML.addEventListener('click', (event) => {
-        let positionClick = event.target;
-        if (positionClick.classList.contains('addCart')) {
-            let id_product = positionClick.parentElement.dataset.id;
-            addToCart(id_product);
-        }
-    });
-
-    const addToCart = (product_id) => {
-        let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
-        if (cart.length <= 0) {
-            cart = [{ product_id: product_id, quantity: 1 }];
-        } else if (positionThisProductInCart < 0) {
-            cart.push({ product_id: product_id, quantity: 1 });
-        } else {
-            cart[positionThisProductInCart].quantity += 1;
-        }
-        addCartToHTML();
-        addCartToMemory();
-    };
-
-    const addCartToMemory = () => {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    };
-
-    const addCartToHTML = () => {
-        listCartHTML.innerHTML = '';
-        let totalQuantity = 0;
-        if (cart.length > 0) {
-            cart.forEach(item => {
-                totalQuantity += item.quantity;
-                let newItem = document.createElement('div');
-                newItem.classList.add('item');
-                newItem.dataset.id = item.product_id;
-
-                let positionProduct = products.findIndex((value) => value.id == item.product_id);
-                let info = products[positionProduct];
-                newItem.innerHTML = `
-                    <div class="image">
-                        <img src="${info.image}">
-                    </div>
-                    <div class="name">${info.name}</div>
-                    <div class="totalPrice">$${info.price * item.quantity}</div>
-                    <div class="quantity">
-                        <span class="minus">❮</span>
-                        <span>${item.quantity}</span>
-                        <span class="plus">❯</span>
-                    </div>`;
-                listCartHTML.appendChild(newItem);
-            });
-        }
-        iconCartSpan.innerText = totalQuantity;
-    };
-
-    listCartHTML.addEventListener('click', (event) => {
-        let positionClick = event.target;
-        if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
-            let product_id = positionClick.parentElement.parentElement.dataset.id;
-            let type = positionClick.classList.contains('plus') ? 'plus' : 'minus';
-            changeQuantityCart(product_id, type);
-        }
-    });
-
-    const changeQuantityCart = (product_id, type) => {
-        let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
-        if (positionItemInCart >= 0) {
-            switch (type) {
-                case 'plus':
-                    cart[positionItemInCart].quantity += 1;
-                    break;
-                default:
-                    cart[positionItemInCart].quantity -= 1;
-                    if (cart[positionItemInCart].quantity <= 0) {
-                        cart.splice(positionItemInCart, 1);
-                    }
-                    break;
-            }
-        }
-        addCartToHTML();
-        addCartToMemory();
-    };
-
-    const initApp = () => {
-        addDataToHTML();
-        if (localStorage.getItem('cart')) {
-            cart = JSON.parse(localStorage.getItem('cart'));
-            addCartToHTML();
-        }
-    };
-
-    initApp();
+// 綁定 "加入購物車" 事件
+listProductHTML.addEventListener('click', (event) => {
+    let positionClick = event.target;
+    if (positionClick.classList.contains('addCart')) {
+        let id_product = positionClick.parentElement.dataset.id; // 獲取商品 ID
+        addToCart(id_product); // 調用購物車的邏輯
+    }
 });
+
+// 初始化商品列表
+addDataToHTML();
