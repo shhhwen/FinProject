@@ -9,11 +9,12 @@ const mockData = [
     { id: 7, name: "兔子的腳", price: 600, image: "../assets/img/products/good7.png" },
     { id: 8, name: "鳳凰羽毛", price: 300000, image: "../assets/img/products/good8.png" },
     { id: 9, name: "古代恐龍的化石", price: 2500000, image: "../assets/img/products/good9.png" },
-    { id: 10, name: "靈光藍花", price: 3520, image: "../assets/img/products/good10.png" },
-    { id: 11, name: "魔法掃帚", price: 12900, image: "../assets/img/products/good11.png" },
-    { id: 12, name: "包你醒腦萬靈丹", price: 990, image: "../assets/img/products/good12.png" },
-    { id: 13, name: "記憶吐司(兩片裝)", price: 7900, image: "../assets/img/products/good13.png" },
-    { id: 14, name: "使魔的蛋", price: 99999, image: "../assets/img/products/good14.png" },
+    { id: 10, name: "曼德拉草", price: 2290, image: "../assets/img/products/good10.png" },
+    { id: 11, name: "靈光藍花", price: 3520, image: "../assets/img/products/good10.png" },
+    { id: 12, name: "魔法掃帚", price: 12900, image: "../assets/img/products/good11.png" },
+    { id: 13, name: "包你醒腦萬靈丹", price: 990, image: "../assets/img/products/good12.png" },
+    { id: 14, name: "記憶吐司(兩片裝)", price: 7900, image: "../assets/img/products/good13.png" },
+    { id: 15, name: "使魔的蛋", price: 99999, image: "../assets/img/products/good14.png" },
 ];
 
 // 初始化商品數據
