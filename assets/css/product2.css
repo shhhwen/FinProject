@@ -1,0 +1,174 @@
+.listProduct .item {
+    background-color: rgb(221, 224, 234);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+    position: relative;
+}
+
+.listProduct .item::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #403a42;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.listProduct .item::before {
+    content: "";
+    background: linear-gradient(45deg, 
+        #d02323, #d78543, #dedb3a, 
+        #57c32d, #26b19a, #394cab, 
+        #d217aa, #d26666);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.listProduct .item:hover::before {
+    opacity: 1;
+}
+
+
+
+.listProduct .item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.listProduct .item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #797077; 
+}
+
+
+.listProduct .item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 
+      0 0 10px #ff0000, 
+      0 0 50px #26b19a, 
+      0 0 60px #394cab, 
+      0 0 70px #d217aa, 
+      0 0 80px #d26666; 
+    color: #d3e2ea;
+}
+
+.listProduct .item button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 5px;
+    color: #bb21f3;
+    letter-spacing: 4px;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    overflow: hidden;
+    background: transparent;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* 卡片懸停時按鈕的動畫效果 */
+.listProduct .item:hover button {
+    color: #6b2584;
+    background: #b821f3;
+    box-shadow: 0 0 10px #b821f3, 0 0 10px #b821f3, 0 0 40px #b821f3, 0 0 80px #b821f3;
+    transition-delay: 1s;
+}
+
+/* 動態邊框效果 */
+.listProduct .item button span {
+    position: absolute;
+    display: block;
+}
+
+.listProduct .item span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #b821f3);
+}
+
+.listProduct .item:hover button span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.listProduct .item span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #d721f3);
+}
+
+.listProduct .item:hover button span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.listProduct .item span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #d721f3);
+}
+
+.listProduct .item:hover button span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.listProduct .item span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+.listProduct .item:hover button span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/* 動態背景動畫 */
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 600% 0; }
+    100% { background-position: 0 0; }
+}
+
+@keyframes borderScroll {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300% 0;
+    }
+}

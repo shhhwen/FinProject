@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+
   
   }
     
@@ -67,7 +67,6 @@ header .icon-cart span{
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 15px;
 }
 
 .listProduct{
@@ -78,35 +77,7 @@ header .icon-cart span{
     margin: 50px 0;
 }
 
-.listProduct .item{
-    background-color: #f5ebff;
-    padding: 30px;
-    border-radius: 20px;
-    text-align: center;
-}
 
-.listProduct .item h2{
-    font-size: 25px;
-    padding: 5px;
-    color: #11052f;
-}
-
-.listProduct .item .price{
-    letter-spacing: 3px;
-    font-size: 15px;
-    color: #11052f;
-
-}
-
-.listProduct .item button{
-    background-color: #503a8e;
-    color: #eee;
-    padding: 10px 15px;
-    border-radius: 20px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-}
 
 .cartTab{
     width: 400px;

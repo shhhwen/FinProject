@@ -32,15 +32,26 @@ const addDataToHTML = () => {
             let newProduct = document.createElement('div'); // 創建商品容器
             newProduct.dataset.id = product.id; // 設置商品 ID
             newProduct.classList.add('item'); // 添加樣式類
+            
+            // 定義商品內容
             newProduct.innerHTML = `
-                <img src="${product.image}" alt="">
+                <img src="${product.image}" alt="${product.name}">
                 <h2>${product.name}</h2>
                 <div class="price">$${product.price}</div>
-                <button class="addCart">加入購物車</button>`;
+                <button class="addCart">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    加入購物車
+                </button>
+            `;
+            
             listProductHTML.appendChild(newProduct); // 添加到商品列表
         });
     }
 };
+
 
 // 綁定 "加入購物車" 事件
 listProductHTML.addEventListener('click', (event) => {
