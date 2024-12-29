@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入/註冊</title>
+    <link rel="stylesheet" href="../assets/js/login.css">
+    <link rel="stylesheet" href="../assets/js/nav.css">
+    <link rel="stylesheet" href="../assets/js/footer.css">
+    <script src="../assets/js/login.js" defer></script>
+</head>
+
+<body>
+      <!--導覽列-->
+      <header>
+        <!--logo-->
+        <a href="index.html"><img src="../assets/img/products/logo.png" class="logo"></a>
+        <nav>
+            <div class="nav-item"><a href="放連結">關於我們</a></div>
+            <div class="nav-item">
+                <span><a href="放連結">所有商品</a></span>
+                <ul>
+                    <li><a href="放連結">魔法藥水</a></li>
+                    <li><a href="放連結">魔法道具</a></li>
+                    <li><a href="放連結">魔法耗材</a></li>
+                    <li><a href="放連結">其他商品</a></li>
+                </ul>
+            </div>
+            <div class="nav-item"><a href="放關於我們連結" class="aboutus">聯繫我們</a></div>
+            <div class="nav-item">
+                <a href="center.html"><span>會員中心</span></a>
+            </div>
+            <!-- 搜尋 -->
+            <div class="right-section">
+                <div class="right-navbar-option">
+                    <form>
+                        <span class="search-container">
+                            <input type="text" name="search" placeholder="searching...">
+                        </span>
+                        <span>
+                            <img src="../assets/img/magnifier.png" class="icon">
+                        </span>
+                    </form>
+                </div>               
+                <div class="nav-item"><a href="放購物車連結"><img src="../assets/img/cart.png" class="icon"></a></div>
+                <div class="nav-item"><a href="login.html"><img src="member.png" style="height: 30px; width:30px ;"></a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="LogReg">
+            <div class="log">
+                <!--按鈕文字，點擊文字，控制圖片/內容切換-->
+                <input type="radio" name="logInput" value="0" id="logInput1" checked hidden />
+                <label for="logInput1">登入</label>
+
+                <input type="radio" name="logInput" value="1" id="logInput2" hidden />
+                <label for="logInput2">註冊</label>
+
+                <ul>
+                    <li>
+                        <form class="login">
+                            <img src="member.png" style="width: 120px;">
+                            <p>LOG IN</p>
+                            <input type="text" name="" placeholder="用戶名"><br>
+                            <input type="password" name="" placeholder="密碼"><br>
+                            <input type="button" value="登入" class="formbtn">
+                        </form>
+                    </li>
+                    <li>
+                        <form class="register">
+                            <p>REGISTER</p>
+                            <input type="text" name="" placeholder="用戶名"><br>
+                            <input type="email" name="" placeholder="信箱"><br>
+                            <input type="text" name="" placeholder="手機"><br>
+                            <input type="password" name="" placeholder="密碼"><br>
+                            <input type="password" name="" placeholder="確認密碼"><br>
+                            <input type="button" value="註冊" class="formbtn">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div style="clear: both;"></div>
+    <footer>
+        <p>2024 © Copyright magic company</p>
+    </footer>
+</body>
+
+</html>
