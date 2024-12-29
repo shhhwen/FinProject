@@ -166,3 +166,28 @@ main {
     width: 90%; /* 内容宽度适配屏幕 */
   }
 }
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column; /* 改為垂直佈局 */
+    width: 100vw;
+    align-items: stretch;
+  }
+
+  .panel {
+    height: 50vh; /* 降低卡片高度 */
+    margin: 10px 0; /* 增加上下間距 */
+  }
+
+  main {
+    grid-template-columns: 1fr; /* 改為單列佈局 */
+    width: 90%; /* 內容寬度適配屏幕 */
+  }
+
+  .title h1 {
+    font-size: 28px; /* 進一步縮小標題字體大小 */
+  }
+
+  .title h2 {
+    font-size: 16px; /* 縮小副標題字體大小 */
+  }
+}
