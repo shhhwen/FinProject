@@ -13,8 +13,9 @@ const mockData = [
     { id: 11, name: "靈光藍花", price: 3520, image: "../assets/img/products/good11.png" },
     { id: 12, name: "魔法掃帚", price: 12900, image: "../assets/img/products/good12.png" },
     { id: 13, name: "包你醒腦萬靈丹", price: 990, image: "../assets/img/products/good13.png" },
-    { id: 14, name: "記憶吐司(兩片裝)", price: 7900, image: "../assets/img/products/good14.png" },
-    { id: 15, name: "使魔的蛋", price: 99999, image: "../assets/img/products/good15.png" },
+    { id: 14, name: "隱形斗篷", price: 8900, image: "../assets/img/products/good14.png" },
+    { id: 15, name: "記憶吐司(兩片裝)", price: 7900, image: "../assets/img/products/good15.png" },
+    { id: 16, name: "使魔的蛋", price: 99999, image: "../assets/img/products/good16.png" },
 ];
 
 // 初始化商品數據
