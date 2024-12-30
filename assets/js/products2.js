@@ -26,16 +26,18 @@ const addDataToHTML = () => {
             
             // 定義商品內容
             newProduct.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h2>${product.name}</h2>
-                <div class="price">$${product.price}</div>
-                <button class="addCart">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    加入購物車
-                </button>
+                <a href="../pages/item.html">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h2>${product.name}</h2>
+                    <div class="price">$${product.price}</div>
+                    <button class="addCart">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        加入購物車
+                    </button>
+                </a>
             `;
             
             listProductHTML.appendChild(newProduct); // 添加到商品列表
