@@ -2,7 +2,6 @@
 * {
     font-family: 'Noto Serif TC', serif; /* 設定字型為 Noto Serif TC */
     color: white; /* 設定文字顏色為白色 */
-    box-sizing: border-box; /* 避免 padding 和邊框影響元素大小 */
 }
 
 /* 設定 body 樣式，並確保頁面完整顯示 */
@@ -28,11 +27,6 @@ body {
     overflow-y: auto; /* 垂直滾動 */
     width: 100vw; /* 滿版寬度 */
     padding-top: 90px; /* 頂部留空，避免內容被覆蓋 */
-}
-
-/* 使內容部分可撐開，讓 footer 固定在頁面底部 */
-.content {
-    flex: 1; /* 讓內容區塊可擴展，填滿剩餘空間 */
 }
 
 /* 設定名稱區塊的定位 */
@@ -267,4 +261,14 @@ h3 {
 /* 設定評論詳細資料中的分隔線樣式 */
 .review-detail hr {
     width: 100%; /* 設定寬度為 100% */
+}
+
+footer {
+    background-color: purple;
+    color: #8c65ed;
+    font-family: Arial;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
 }
