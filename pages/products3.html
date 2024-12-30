@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about us</title>
-    <link rel="stylesheet" href="../assets/css/about.css">
+    <title>Ερμάριον 魔法儲物櫃</title>
+    <link rel="stylesheet" href="../assets/css/products.css">
+    <link rel="stylesheet" href="../assets/css/product2.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/nav.css">
+
 </head>
-<body>
+<body class="showCart">
+
     <!--導覽列-->
     <header>
         <!--logo-->
@@ -46,23 +50,32 @@
             </div>
         </nav>
     </header>
-<main>
-    <div class="card">
-        <img src="../assets/img/us/us1.png" alt="">
-        <h2>游舒僅</h2>
-        <p>我在這次負責了首頁和所有的商品和廣告圖片，很高興我的畫畫能力能派上用場，也很幸運的能和兩位志同道合的魔法師（？）一起製作這次的魔法用品網頁，雖然這些商品不會真的存在於世界上，但期末我好需要豹肝藥!</p>
-    </div>
-    <div class="card">
-        <img src="../assets/img/us/us2.png" alt="">
-        <h2>吳世雯</h2>
-        <p>上了一整個學期的多媒體程式設計，很高興最後能做出一個成品，多虧了組員們的互相協助，我們才能完成這個魔法網站。在這個神奇的網站中，我覺得最困難的是撰寫js的部分，真的快搞鼠我。希望大家喜歡這個網站</p>
-    </div>
-    <div class="card">
-        <img src="../assets/img/us/us3.png" alt="">
-        <h2>蕭儀佳</h2>
-        <p>這次的網站設計對我而言是一項很具挑戰性的挑戰，從打草稿、寫出架構、排版以及與組員的溝通和整合，雖然上課有教許多概念，但是真正撰寫時，有好多東西都是要自己去查詢與摸索才能寫出來，都是從未有過的經驗，十分有趣！</p>
-    </div>
-</main>
+        
 
+    <div class="container">
+        <div class="title"><h1>魔法道具</h1></div>
+        <div class="listProduct">
+            <!-- 商品由 JS 動態生成 -->
+        </div>
+    </div>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <!-- 購物車由 JS 動態生成 -->
+        </div>
+        <div class="btn">
+            <button class="close">關閉</button>
+            <button class="checkOut">結帳</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 © Copyright magic company</p>
+    </footer>
+
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/products3.js"></script>
+  
 </body>
 </html>
