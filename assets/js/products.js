@@ -1,4 +1,4 @@
-// 商品數據（可以模擬或者從 API 獲取）
+// 商品數據
 const mockData = [
     { id: 1, name: "豹肝藥", price: 1500, image: "../assets/img/products/good1.png" },
     { id: 2, name: "打嗝藥水", price: 450, image: "../assets/img/products/good2.png" },
