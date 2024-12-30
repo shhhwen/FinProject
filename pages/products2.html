@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../assets/css/product2.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/nav.css">
-
+    <script src="../assets/js/nav.js"></script>
+    <script src="../assets/js/nav.js"></script>
 </head>
+
 <body class="showCart">
 
     <!--導覽列-->
@@ -17,20 +19,21 @@
         <!--logo-->
         <a href="../pages/index.html"><img src="../assets/img/logo.png" class="logo"></a>
         <nav>
-            <div class="nav-item"><a href="../pages/contact.html">關於我們</a></div>
-            <div class="nav-item">
-                <span><a href="../pages/products-all.html">所有商品</a></span>
-                <ul>
-                    <li><a href="../pages/products1.html">魔法藥水</a></li>
-                    <li><a href="../pages/products2.html">魔法道具</a></li>
-                    <li><a href="../pages/products3.html">魔法耗材</a></li>
-                </ul>
-            </div>
-            <div class="nav-item"><a href="../pages/contact.html" class="aboutus">聯繫我們</a></div>
-            <div class="nav-item">
-                <a href="../pages/center.html"><span>會員中心</span></a>
-            </div>
-            <!-- 搜尋 -->
+            <div class="nav-list">
+                <div class="nav-item"><a href="../pages/contact.html">關於我們</a></div>
+                <div class="nav-item">
+                    <span><a href="../pages/products-all.html">所有商品</a></span>
+                    <ul>
+                        <li><a href="../pages/products1.html">魔法藥水</a></li>
+                        <li><a href="../pages/products2.html">魔法道具</a></li>
+                        <li><a href="../pages/products3.html">魔法耗材</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item"><a href="../pages/contact.html" class="aboutus">聯繫我們</a></div>
+                <div class="nav-item">
+                    <a href="../pages/center.html"><span>會員中心</span></a>
+                </div>
+            </div>            <!-- 搜尋 -->
             <div class="right-section">
                 <div class="right-navbar-option">
                     <form>
@@ -47,6 +50,9 @@
                     <span>0</span>
                 </div>
                 <div class="nav-item"><a href="../pages/login.html"><img src="../assets/img/member.png" class="icon"></a></div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="../assets/img/test-can delete.jpg" class="icon">
+                </div>    
             </div>
         </nav>
     </header>
