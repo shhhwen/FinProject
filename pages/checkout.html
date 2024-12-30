@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/checkout.css">
     <link rel="stylesheet" href="../assets/css/nav.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-
+    <script src="../assets/js/nav.js"></script>
     <script src="../assets/js/item.js"></script>
 
 
@@ -16,23 +16,23 @@
     <!--導覽列-->
     <header>
         <!--logo-->
-        <a href="放首頁連結"><img src="../assets/img/logo.png" class="logo"></a>
+        <a href="../pages/index.html"><img src="../assets/img/logo.png" class="logo"></a>
         <nav>
-            <div class="nav-item"><a href="放連結">關於我們</a></div>
-            <div class="nav-item">
-                <span><a href="放連結">所有商品</a></span>
-                <ul>
-                    <li><a href="放連結">魔法藥水</a></li>
-                    <li><a href="放連結">魔法道具</a></li>
-                    <li><a href="放連結">魔法耗材</a></li>
-                    <li><a href="放連結">其他商品</a></li>
-                </ul>
-            </div>
-            <div class="nav-item"><a href="放關於我們連結" class="aboutus">聯繫我們</a></div>
-            <div class="nav-item">
-                <a href="center.html"><span>會員中心</span></a>
-            </div>
-            <!-- 搜尋 -->
+            <div class="nav-list">
+                <div class="nav-item"><a href="../pages/contact.html">關於我們</a></div>
+                <div class="nav-item">
+                    <span><a href="../pages/products-all.html">所有商品</a></span>
+                    <ul>
+                        <li><a href="../pages/products1.html">魔法藥水</a></li>
+                        <li><a href="../pages/products2.html">魔法道具</a></li>
+                        <li><a href="../pages/products3.html">魔法耗材</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item"><a href="../pages/contact.html" class="aboutus">聯繫我們</a></div>
+                <div class="nav-item">
+                    <a href="../pages/center.html"><span>會員中心</span></a>
+                </div>
+            </div>            <!-- 搜尋 -->
             <div class="right-section">
                 <div class="right-navbar-option">
                     <form>
@@ -48,11 +48,14 @@
                     <img src="../assets/img/cart.png" class="icon">
                     <span>0</span>
                 </div>
-                <div class="nav-item"><a href="放登入連結"><img src="../assets/img/member.png" class="icon"></a></div>
+                <div class="nav-item"><a href="../pages/login.html"><img src="../assets/img/member.png" class="icon"></a></div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="../assets/img/test-can delete.jpg" class="icon">
+                </div>    
             </div>
         </nav>
     </header>
-
+    
     <section>
         <div class="cart">
             <div class="cartitle">結帳</div>
@@ -69,7 +72,7 @@
                         <tr><td colspan="6"><hr></td></tr>
                         <tr>
                             <td class="tds"><img src="../assets/img/products/good4.png"></td>
-                            <td class="tds">Forget juice<br>遺忘汁<br><br>$1,580</td>
+                            <td class="tds">Forget juice<br>遺忘汁<br><br>$1,450</td>
                             <td>
                                  <div class="quant">
                                      <input type="button" value="-" class="btn" onclick="minus(0)">
@@ -77,13 +80,13 @@
                                      <input type="button" value="+" class="btn" onclick="add(0)">
                                  </div>
                             </td>
-                            <td>$1,580</td>
+                            <td>$1,450</td>
                             <td><button class="delete" name="delet_b" value="">✕</button></td>
                         </tr>
                         <tr><td colspan="6"><hr></td></tr>
                         <tr>
                             <td class="tds"><img src="../assets/img/products/good10.png"></td>
-                            <td class="tds">Mandragora<br>曼德拉草<br><br>$1,350</td>
+                            <td class="tds">Mandragora<br>曼德拉草<br><br>$2,290</td>
                             <td>
                                 <div class="quant">
                                     <input type="button" value="-" class="btn" onclick="minus(1)">
@@ -91,13 +94,13 @@
                                     <input type="button" value="+" class="btn" onclick="add(1)">
                                 </div>
                             </td>
-                            <td>$1,350</td>
+                            <td>$2,290</td>
                             <td><button class="delete" name="delet_b" value="">✕</button></td>
                         </tr>
                         <tr><td colspan="6"><hr></td></tr>
                         <tr>
                             <td class="tds"><img src="../assets/img/products/good11.png"></td>
-                            <td class="tds">What Flower<br>這啥花<br><br>$1,350</td>
+                            <td class="tds">What Flower<br>靈光藍花<br><br>$3,520</td>
                             <td>
                                 <div class="quant">
                                     <input type="button" value="-" class="btn" onclick="minus(2)">
@@ -105,7 +108,7 @@
                                     <input type="button" value="+" class="btn" onclick="add(2)">
                                 </div>
                             </td>
-                            <td>$1,350</td>
+                            <td>$3,520</td>
                             <td><button class="delete" name="delet_b" value="">✕</button></td>
                         </tr>
                         <tr><td colspan="6"><hr></td></tr>
@@ -114,15 +117,14 @@
                 <div class="total">
                     <p class="title_sum">訂單摘要</p>
                     <hr>
-                    <div class="title_s"><p>商品</p><p>NT$ 4,280</p></div>
+                    <div class="title_s"><p>商品</p><p>NT$ 7,260</p></div>
                     <div class="title_s" style="padding-bottom: 24px;"><p>運費</p><p>NT$ 60</p></div>
                     <hr>
-                    <div class="title_t"><p>總金額</p><p>NT$ 4,340</p></div>
-                    <input type="button" value="CHECK OUT" class="button_check"><br>
-                    <input type="button" value="BACK TO SHOP" class="button_back">
+                    <div class="title_t"><p>總金額</p><p>NT$ 7,320</p></div>
+                    <input type="button" value="CHECK OUT" class="button_check" onclick="alert('購買完成');"><br>
+                    <a href="../pages/products.html"><input type="button" value="BACK TO SHOP" class="button_back"></a>
                 </div>
             </div>
-
         </div>
     </section>
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/item.css">
     <link rel="stylesheet" href="../assets/css/nav.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
-
+    <script src="../assets/js/nav.js"></script>
     <script src="../assets/js/item.js"></script>
 
 
@@ -16,23 +16,23 @@
     <!--導覽列-->
     <header>
         <!--logo-->
-        <a href="放首頁連結"><img src="../assets/img/logo.png" class="logo"></a>
+        <a href="../pages/index.html"><img src="../assets/img/logo.png" class="logo"></a>
         <nav>
-            <div class="nav-item"><a href="放連結">關於我們</a></div>
-            <div class="nav-item">
-                <span><a href="放連結">所有商品</a></span>
-                <ul>
-                    <li><a href="放連結">魔法藥水</a></li>
-                    <li><a href="放連結">魔法道具</a></li>
-                    <li><a href="放連結">魔法耗材</a></li>
-                    <li><a href="放連結">其他商品</a></li>
-                </ul>
-            </div>
-            <div class="nav-item"><a href="放關於我們連結" class="aboutus">聯繫我們</a></div>
-            <div class="nav-item">
-                <a href="center.html"><span>會員中心</span></a>
-            </div>
-            <!-- 搜尋 -->
+            <div class="nav-list">
+                <div class="nav-item"><a href="../pages/contact.html">關於我們</a></div>
+                <div class="nav-item">
+                    <span><a href="../pages/products-all.html">所有商品</a></span>
+                    <ul>
+                        <li><a href="../pages/products1.html">魔法藥水</a></li>
+                        <li><a href="../pages/products2.html">魔法道具</a></li>
+                        <li><a href="../pages/products3.html">魔法耗材</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item"><a href="../pages/contact.html" class="aboutus">聯繫我們</a></div>
+                <div class="nav-item">
+                    <a href="../pages/center.html"><span>會員中心</span></a>
+                </div>
+            </div>            <!-- 搜尋 -->
             <div class="right-section">
                 <div class="right-navbar-option">
                     <form>
@@ -48,16 +48,18 @@
                     <img src="../assets/img/cart.png" class="icon">
                     <span>0</span>
                 </div>
-                <div class="nav-item"><a href="放登入連結"><img src="../assets/img/member.png" class="icon"></a></div>
+                <div class="nav-item"><a href="../pages/login.html"><img src="../assets/img/member.png" class="icon"></a></div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="../assets/img/test-can delete.jpg" class="icon">
+                </div>    
             </div>
         </nav>
     </header>
     
-
     <main>
         <div class="introduce">
             <div class="image">
-                    <img src="../assets/img/products/good1.png" style="width:450px;">              
+                    <img src="../assets/img/products/good4.png" style="width:450px;">              
             </div>
             <div class="title">
                 <div class="titpro">
@@ -69,8 +71,8 @@
                     <input type="button" value="-" class="btn" onclick="minus(0)">
                     <input type="text" value="1" class="input_num">
                     <input type="button" value="+" class="btn" onclick="add(0)">
-                    <a href="shoppingcart.html"><input type="button" value="加入購物車" class="button_shop"></a>
-                    <a href="shoppingcart.html"><input type="button" value="立即購買" class="button_shop"></a>
+                    <a href="../pages/checkout.html"><input type="button" value="加入購物車" class="button_shop"></a>
+                    <a href="../pages/checkout.html"><input type="button" value="立即購買" class="button_shop"></a>
                 </div>
 
                 <p class="title_b">功效</p>
@@ -87,16 +89,16 @@
             <hr class="hr-solid-content" data-content="推薦商品">
             <div class="otherItem">
                 <div class="item1">
-                    <div class="itemph2"><img src="../assets/img/products/good2.png"></div>
-                    <div class="besttxt">Mandragora<br>曼德拉草<br><br>NT$ 1,980</div>
+                    <div class="itemph2"><img src="../assets/img/products/good10.png"></div>
+                    <div class="besttxt">Mandragora<br>曼德拉草<br><br>NT$ 2,290</div>
                 </div>
                 <div class="item1">
-                    <div class="itemph2"><img src="../assets/img/products/good3.png"></div>
-                    <div class="besttxt">What Flower<br>這啥花<br><br>NT$ 1,580</div>
+                    <div class="itemph2"><img src="../assets/img/products/good11.png"></div>
+                    <div class="besttxt">What Flower<br>靈光藍花<br><br>NT$ 3,520</div>
                 </div>
                 <div class="item1">
-                    <div class="itemph2"><img src="../assets/img/products/good4.png"></div>
-                    <div class="besttxt">Familiar Egg<br>使魔的蛋<br><br>NT$ 2,380</div>
+                    <div class="itemph2"><img src="../assets/img/products/good16.png"></div>
+                    <div class="besttxt">Familiar Egg<br>使魔的蛋<br><br>NT$ 99,999</div>
                 </div>
             </div>
         </section>

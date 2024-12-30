@@ -34,6 +34,24 @@ nav {
     align-items: center;
 }
 
+/* 隱藏的選單按鈕 */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon .icon {
+    height: 30px;
+    width: 30px;
+}
+
+/* 導覽項目列表 */
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .nav-item {
     margin: 0 15px;
     display: flex;
@@ -145,79 +163,52 @@ nav .right-section .icon {
     border-color: rgb(240, 240, 240);
 }
 
-
-
-/* 主導航欄 RWD */
-@media (max-width: 992px) {
-    .nav-item {
-        margin: 0 10px; /* 減少邊距，適應較小屏幕 */
-        font-size: 18px; /* 縮小文字大小 */
-    }
-
-    .nav-item ul {
-        width: 150px; /* 減小下拉選單寬度 */
-    }
-
-    .nav-item ul li {
-        font-size: 14px; /* 縮小下拉選單文字大小 */
-    }
-}
-
+/* RWD */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* 將導航欄垂直排列 */
-        align-items: flex-start;
-        padding: 10px 20px; /* 減少內邊距 */
-        height: auto; /* 自動適應內容高度 */
+    /* 隱藏 `nav-item` 並顯示選單按鈕 */
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
     }
 
-    .logo {
-        margin: 0 0 10px 0; /* 調整 logo 的外邊距 */
-        height: 80px;
-        width: 80px; /* 縮小 logo 尺寸 */
+    .menu-icon {
+        display: block;
     }
 
-    nav {
-        display: block; /* 使用垂直導航 */
-        width: 100%; /* 占滿可用空間 */
+    .nav-list.show {
+        display: flex;
     }
 
     .nav-item {
-        display: block; /* 將每個導航項目堆疊 */
-        width: 100%;
-        text-align: left; /* 左對齊 */
-        margin: 5px 0; /* 添加上下間距 */
+        margin: 10px 0;
+        text-align: center;
     }
 
     .nav-item ul {
-        position: relative; /* 改為相對定位 */
-        top: 0;
-        left: 0;
-        transform: none; /* 移除居中對齊 */
-        width: 100%; /* 占滿可用寬度 */
+        position: static;
+        transform: none;
+        background: none;
+        box-shadow: none;
     }
 
     .nav-item ul li {
-        padding: 10px 10px; /* 縮小內邊距 */
-        font-size: 14px; /* 減小文字大小 */
+        padding: 10px 0;
+    }
+
+    .right-section {
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
         height: 60px;
-        width: 60px; /* 進一步縮小 logo 尺寸 */
-    }
-
-    .nav-item {
-        font-size: 16px; /* 繼續縮小文字大小 */
-    }
-
-    .nav-item ul li {
-        font-size: 12px; /* 最小的文字大小 */
-    }
-
-    .search-container input {
-        width: 100px; /* 縮小搜索欄寬度 */
+        width: 60px;
     }
 }
