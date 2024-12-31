@@ -1,18 +1,3 @@
-
-function minus(ctn_num) {
-    var num = Number(document.getElementsByClassName("input_num")[ctn_num].value);
-    if (num > 1) {
-        document.getElementsByClassName("input_num")[ctn_num].value = num - 1;
-    }
-}
-
-function add(ctn_num) {
-    var num = Number(document.getElementsByClassName("input_num")[ctn_num].value);
-    if (num < 100) {
-        document.getElementsByClassName("input_num")[ctn_num].value = num + 1;
-    }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     // 獲取商品 ID
     const urlParams = new URLSearchParams(window.location.search);
@@ -33,7 +18,45 @@ document.addEventListener('DOMContentLoaded', () => {
         // 商品未找到
         document.querySelector('main').innerHTML = `<p>商品未找到</p>`;
     }
-});
 
-// 初始化
-loadProduct();
+    // 綁定加減按鈕事件
+    const minusButton = document.querySelector('.btn.minus');
+    const plusButton = document.querySelector('.btn.plus');
+    const quantityInput = document.querySelector('.input_num');
+    const addCartButton = document.querySelector('.button_shop.addCart');
+    const buyNowButton = document.querySelector('.button_shop.buyNow');
+
+    // 數量加減按鈕
+    minusButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value) || 1;
+        if (currentValue > 1) {
+            quantityInput.value = currentValue - 1;
+        }
+    });
+
+    plusButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value) || 1;
+        if (currentValue < 100) {
+            quantityInput.value = currentValue + 1;
+        }
+    });
+
+    // 加入購物車按鈕
+    addCartButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value) || 1;
+        if (currentValue < 100) {
+            quantityInput.value = currentValue + 1;
+        }
+        alert("已加入購物車！");
+    });
+
+    // 立即購買按鈕
+    buyNowButton.addEventListener('click', () => {
+        let currentValue = parseInt(quantityInput.value) || 1;
+        if (currentValue < 100) {
+            quantityInput.value = currentValue + 1;
+        }
+        alert("即將跳轉至結帳頁面！");
+        window.location.href = "../pages/checkout.html"; // 跳轉到結帳頁面
+    });
+});
