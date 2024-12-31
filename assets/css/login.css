@@ -220,3 +220,15 @@ form input {
     background-color: purple; /* 改變背景顏色 */
     color: #fefdf9; /* 改變字體顏色 */
 }
+
+footer {
+    background-color: #281832;
+    color: #8c65ed;
+    font-family: Arial;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+    width: 100%;
+    bottom: 0; 
+    margin-top: 50px;
+}
