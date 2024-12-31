@@ -58,30 +58,30 @@
     
     <main>
         <div class="introduce">
+            <!-- 商品圖片 -->
             <div class="image">
-                    <img src="../assets/img/products/good4.png" style="width:450px;">              
+                <img src="" alt="商品圖片" style="width:450px;">
             </div>
+
+            <!-- 商品資訊 -->
             <div class="title">
                 <div class="titpro">
-                    <p class="title_a">Forget juice<br>遺忘汁</p>
-                    <p class="proprice">NT$1,350</p>
+                    <p class="title_a"></p>
+                    <p class="proprice"></p>
                 </div>
-                <p class="title_c">庫存：10</p>
+                <p class="title_c"></p>
                 <div class="shopping">
-                    <input type="button" value="-" class="btn" onclick="minus(0)">
+                    <input type="button" value="-" class="btn minus">
                     <input type="text" value="1" class="input_num">
-                    <input type="button" value="+" class="btn" onclick="add(0)">
-                    <a href="../pages/checkout.html"><input type="button" value="加入購物車" class="button_shop"></a>
-                    <a href="../pages/checkout.html"><input type="button" value="立即購買" class="button_shop"></a>
+                    <input type="button" value="+" class="btn plus">
+                    <button class="button_shop addCart">加入購物車</button>
+                    <button class="button_shop buyNow">立即購買</button>
                 </div>
 
                 <p class="title_b">功效</p>
-                <p class="title_c">不小心看了什麼傷眼睛的東西就可以喝一口保護眼睛和腦袋</p>
+                <p class="title_c description"></p>
                 <p class="title_b">內容物</p>
-                <p class="title_c">哥布林肝臟<br>
-                    忘憂草<br>
-                    妖精閃粉<br>
-                </p>
+                <p class="title_c ingredients"></p>
             </div>
         </div>
 
@@ -162,8 +162,11 @@
 
     <footer>
         <p>2024 © Copyright magic company</p>
-      </footer>
+    </footer>
     
+    <script src="../assets/js/products-all.js"></script>
+    <script src="../assets/js/item.js"></script>
+
 
 </body>
 </html>
