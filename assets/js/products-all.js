@@ -35,18 +35,20 @@ const addDataToHTML = () => {
             
             // 定義商品內容
             newProduct.innerHTML = `
-                <a href="../pages/item.html">
-                    <img src="${product.image}" alt="${product.name}">
-                    <h2>${product.name}</h2>
-                    <div class="price">$${product.price}</div>
-                    <button class="addCart">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        加入購物車
-                    </button>
-                </a>
+                <div class="product-image">
+                    <a href="../pages/item.html?id=${product.id}">
+                        <img src="${product.image}" alt="${product.name}">
+                    </a>
+                </div>                    
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>
+                <button class="addCart">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    加入購物車
+                </button>
             `;
             
             listProductHTML.appendChild(newProduct); // 添加到商品列表
@@ -57,10 +59,13 @@ const addDataToHTML = () => {
 
 // 綁定 "加入購物車" 事件
 listProductHTML.addEventListener('click', (event) => {
-    let positionClick = event.target;
-    if (positionClick.classList.contains('addCart')) {
-        let id_product = positionClick.parentElement.dataset.id; // 獲取商品 ID
-        addToCart(id_product); // 調用購物車的邏輯
+    let target = event.target;
+
+    // 點擊加入購物車按鈕
+    if (target.classList.contains('addCart')) {
+        let id_product = target.closest('.item').dataset.id; // 獲取商品 ID
+        addToCart(id_product); // 呼叫購物車邏輯
+        event.preventDefault(); // 防止預設行為（避免按鈕觸發鏈結行為）
     }
 });
 
