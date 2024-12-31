@@ -12,7 +12,7 @@ body {
     box-sizing: border-box; /* 確保寬高計算包含 padding 和 border */
     
     background-image: 
-        url('../assets/img/us/backgr.png'), 
+        url('../img/backgr.png'), 
         linear-gradient(to top, #161021 0%, #402a4e 100%); /* 背景圖片與漸層 */
     background-size: cover; /* 圖片和漸層都填滿 */
     background-position: center; /* 圖片和漸層置中 */
