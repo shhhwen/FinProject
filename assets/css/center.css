@@ -7,7 +7,7 @@
 /* 設定 body 樣式，並確保頁面完整顯示 */
 body {
     background-image: 
-        url('../img/backgr.png'), 
+        url('backgr.png'), 
         linear-gradient(to top, #161021 0%, #402a4e 100%); /* 背景圖片與漸層 */
     background-size: cover; /* 圖片和漸層都填滿 */
     background-position: center; /* 圖片和漸層置中 */
@@ -16,6 +16,7 @@ body {
 
     display: flex; /* 使用 Flexbox 排版 */
     flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平置中 */
     min-height: 100vh; /* 確保內容最小高度為視窗高度 */
     overflow-x: hidden; /* 禁止水平滾動 */
     overflow-y: auto; /* 垂直滾動 */
@@ -34,6 +35,14 @@ body {
     color: inherit; /* 繼承父元素的顏色 */
     display: block; /* 讓超連結成為區塊元素 */
     line-height: 30px; /* 設定行高 */
+}
+
+/* 設定 tab 的樣式 */
+.tab_css {
+    display: flex; /* 使用 Flexbox 排列 tab */
+    flex-wrap: wrap; /* 當空間不足時，允許換行 */
+    justify-content: center; /* 使 tab 水平居中 */
+    margin-top: 0%; /* 上方留出空間 */
 }
 
 /* 隱藏 tab 的 input 元素 */
