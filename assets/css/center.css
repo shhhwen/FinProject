@@ -6,8 +6,6 @@
 
 /* 設定 body 樣式，並確保頁面完整顯示 */
 body {
-    font-family: Arial, sans-serif; /* 設定字型為 Arial */
-    
     background-image: 
         url('../img/backgr.png'), 
         linear-gradient(to top, #161021 0%, #402a4e 100%); /* 背景圖片與漸層 */
