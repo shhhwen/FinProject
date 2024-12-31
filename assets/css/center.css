@@ -7,9 +7,6 @@
 /* 設定 body 樣式，並確保頁面完整顯示 */
 body {
     font-family: Arial, sans-serif; /* 設定字型為 Arial */
-    margin: 0; /* 取消預設的 margin */
-    padding: 0; /* 取消預設的 padding */
-    box-sizing: border-box; /* 確保寬高計算包含 padding 和 border */
     
     background-image: 
         url('../img/backgr.png'), 
@@ -21,7 +18,6 @@ body {
 
     display: flex; /* 使用 Flexbox 排版 */
     flex-direction: column; /* 垂直排列 */
-    align-items: center; /* 水平置中 */
     min-height: 100vh; /* 確保內容最小高度為視窗高度 */
     overflow-x: hidden; /* 禁止水平滾動 */
     overflow-y: auto; /* 垂直滾動 */
