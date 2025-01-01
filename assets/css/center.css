@@ -41,7 +41,7 @@ body {
     display: flex; /* 使用 Flexbox 排列 tab */
     flex-wrap: wrap; /* 當空間不足時，允許換行 */
     justify-content: center; /* 使 tab 水平居中 */
-    margin-top: 0%; /* 上方留出空間 */
+    margin-top: 3%; /* 上方留出空間 */
 }
 
 /* 隱藏 tab 的 input 元素 */
