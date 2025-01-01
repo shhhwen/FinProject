@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ερμάριον 魔法儲物櫃</title>
+    <link rel="stylesheet" href="../assets/css/center2.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    
+</head>
+<body>
+    <!--導覽列-->
+    <header>
+        <!--logo-->
+        <a href="../pages/index.html"><img src="../assets/img/logo.png" class="logo"></a>
+        <nav>
+            <div class="nav-list">
+                <div class="nav-item"><a href="../pages/about.html">關於我們</a></div>
+                <div class="nav-item">
+                    <span><a href="../pages/products-all.html">所有商品</a></span>
+                    <ul>
+                        <li><a href="../pages/products1.html">魔法藥水</a></li>
+                        <li><a href="../pages/products2.html">魔法道具</a></li>
+                        <li><a href="../pages/products3.html">魔法耗材</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item"><a href="../pages/contact.html" class="aboutus">聯繫我們</a></div>
+                <div class="nav-item">
+                    <a href="../pages/center-profile.html"><span>會員中心</span></a>
+                </div>
+            </div>            <!-- 搜尋 -->
+            <div class="right-section">
+                <div class="right-navbar-option">
+                    <form>
+                        <span class="search-container">
+                            <input type="text" name="search" placeholder="searching...">
+                        </span>
+                        <span>
+                            <img src="../assets/img/magnifier.png" class="icon">
+                        </span>
+                    </form>
+                </div>               
+                <div class="nav-item icon-cart">
+                    <img src="../assets/img/cart.png" class="icon">
+                    <span>0</span>
+                </div>
+                <div class="nav-item"><a href="../pages/login.html"><img src="../assets/img/member.png" class="icon"></a></div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="../assets/img/more.png" class="icon">
+                </div>    
+            </div>
+        </nav>
+    </header>    
+
+    <!--歷史評論-->
+    <div class="member">
+        <div class="title-container">
+            <h2 class="member-title">會員中心</h2>
+        </div>
+        <div class="member-container">
+            <section>
+                <div class="radio-inputs">
+                    <label class="radio">
+                    <a href="../pages/center-profile.html">
+                        <input type="radio" name="radio">
+                        <span class="name">個人資訊</span>
+                    </a>
+                    </label>
+                    
+                    <label class="radio">
+                    <a href="../pages/center-product.html">
+                        <input type="radio" name="radio">
+                        <span class="name">購物紀錄</span>
+                    </a>
+                    </label>
+                        
+                    <label class="radio">
+                    <a href="../pages/center-comment.html">
+                        <input type="radio" name="radio" checked="">
+                        <span class="name">歷史評論</span>
+                    </a>
+                    </label>
+                </div>
+
+                <div class="logout-container">
+                    <a href="#" class="logout-style">
+                        <i class='bx bx-log-out icon'></i>&nbsp
+                        <span class="logout">Log Out</span>
+                    </a>
+                </div>
+
+                <div class="profile">
+                    <div>
+                        <p>歷史評論</p>
+                    </div>
+
+                    <!--歷史評論-->
+                    <div class="comment">
+                        <div class="reviews-section" id="reviews-section">
+                            <div class="individual-reviews" id="individual-reviews">
+                                <div class="review">
+                                    <img src="../assets/img/products/good4.png" alt="">
+                                    <h5>遺忘汁</h3>
+                                    <span>Dec. 31, 2024</span>
+                                    <span class="stars">★★★★★</span>
+                                    <p>我什麼都不記得了，很好！</p>
+                                </div>
+                                <div class="review">
+                                    <img src="../assets/img/products/good16.png" alt="">
+                                    <h5>使魔的蛋</h3>
+                                    <span>Jun. 19, 2023</span>
+                                    <span class="stars">★★★★★</span>
+                                    <p>我孵出呀哈哈了！好棒！</p>
+                                </div>
+                                <div class="review">
+                                    <img src="../assets/img/products/good10.png" alt="">
+                                    <h5>曼德拉草</h3>
+                                    <span>Feb. 28, 2022</span>
+                                    <span class="stars">★★★★★</span>
+                                    <p>讓討厭的人聾了，哈哈。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 © Copyright magic company</p>
+    </footer> 
+
+    <script src="../assets/js/center2.js"></script>
+
+</body>
+</html>

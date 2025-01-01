@@ -1,21 +1,7 @@
-/* 引入字體樣式 */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&display=swap');
-
-/* 全局設置：清除所有元素的內外邊距，設置盒模型為 border-box */
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-}
-
-/* 特定英文字體樣式 */
-.eng {
-    font-family: 'Cormorant', serif; /* 使用引入的字體 */
-}
-
-/* 網頁背景及字體設定 */
-body {
-    font-family: Verdana, sans-serif; /* 預設字體 */
 }
 
 /* 登入/註冊頁面的樣式設定 */

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ερμάριον 魔法儲物櫃</title>
+    <link rel="stylesheet" href="../assets/css/center2.css">
+    <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+</head>
+<body>
+    <!--導覽列-->
+    <header>
+        <!--logo-->
+        <a href="../pages/index.html"><img src="../assets/img/logo.png" class="logo"></a>
+        <nav>
+            <div class="nav-list">
+                <div class="nav-item"><a href="../pages/about.html">關於我們</a></div>
+                <div class="nav-item">
+                    <span><a href="../pages/products-all.html">所有商品</a></span>
+                    <ul>
+                        <li><a href="../pages/products1.html">魔法藥水</a></li>
+                        <li><a href="../pages/products2.html">魔法道具</a></li>
+                        <li><a href="../pages/products3.html">魔法耗材</a></li>
+                    </ul>
+                </div>
+                <div class="nav-item"><a href="../pages/contact.html" class="aboutus">聯繫我們</a></div>
+                <div class="nav-item">
+                    <a href="../pages/center-profile.html"><span>會員中心</span></a>
+                </div>
+            </div>            <!-- 搜尋 -->
+            <div class="right-section">
+                <div class="right-navbar-option">
+                    <form>
+                        <span class="search-container">
+                            <input type="text" name="search" placeholder="searching...">
+                        </span>
+                        <span>
+                            <img src="../assets/img/magnifier.png" class="icon">
+                        </span>
+                    </form>
+                </div>               
+                <div class="nav-item icon-cart">
+                    <img src="../assets/img/cart.png" class="icon">
+                    <span>0</span>
+                </div>
+                <div class="nav-item"><a href="../pages/login.html"><img src="../assets/img/member.png" class="icon"></a></div>
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <img src="../assets/img/more.png" class="icon">
+                </div>    
+            </div>
+        </nav>
+    </header>
+
+    <!--個人資訊-->
+    <div class="member">
+        <div class="title-container">
+            <h2 class="member-title">會員中心</h2>
+        </div>
+        <div class="member-container">
+            <section>
+                <div class="radio-inputs">
+                    <label class="radio">
+                    <a href="../pages/center-profile.html">
+                        <input type="radio" name="radio" checked="">
+                        <span class="name">個人資訊</span>
+                    </a>
+                    </label>
+                    
+                    <label class="radio">
+                    <a href="../pages/center-product.html">
+                        <input type="radio" name="radio">
+                        <span class="name">購物紀錄</span>
+                    </a>
+                    </label>
+                        
+                    <label class="radio">
+                    <a href="../pages/center-comment.html">
+                        <input type="radio" name="radio">
+                        <span class="name">歷史評論</span>
+                    </a>
+                    </label>
+                </div>
+
+                <div class="logout-container">
+                    <a href="#" class="logout-style">
+                        <i class='bx bx-log-out icon'></i>&nbsp
+                        <span class="logout">Log Out</span>
+                    </a>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-picture">
+                        <img src="../assets/img/profile.jpg" alt="Profile Picture">
+                        <p>個人資訊</p>
+                    </div>
+
+                    <!--個人資訊-->
+                    <form class="form-label" id="profileForm" action="" method="POST"> 
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" value="薩爾達" readonly>
+                        
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" value="switch666@gmail.com" readonly>
+                        
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" value="0912-345-6789" readonly>
+                        
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" value="886 中央海拉魯海拉魯城堡主殿" readonly>
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" value="weifefhosfi" readonly>
+                        
+                        <div class="button-container">
+                            <button type="button" id="cancelButton" onclick="cancelEdit()" style="display:none;">取消</button>
+                            <button type="submit" id="saveButton" style="display:none;">儲存</button>
+                            <button type="button" id="editButton" onclick="toggleEdit()"><iconify-icon icon="jam:write-f"></iconify-icon> &nbsp修改</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>2024 © Copyright magic company</p>
+    </footer>
+      
+    <script src="../assets/js/center2.js"></script>
+
+</body>
+</html> 

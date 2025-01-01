@@ -5,6 +5,7 @@
 
 }
 
+
 html, body {
   height: 100%; /* 确保背景覆盖整个页面，包括溢出的内容 */
 }
@@ -21,6 +22,8 @@ body {
   flex-direction: column; /* 垂直布局，包括标题和内容 */
   align-items: center; /* 水平居中 */
   overflow-y: auto; /* 允许页面滚动 */
+  cursor: url("homepageImg/mouse2.png") 16 16, auto;
+
 }
 
 .featured{
@@ -45,6 +48,7 @@ body {
   margin-bottom: 50px;
 }
 
+
 .title h1 {
   font-size: 36px;
   margin-bottom: 10px;
@@ -65,6 +69,8 @@ body {
 }
 
 /* 保留之前的 .panel 和 main 样式 */
+
+
 .panel {
   background-size: cover;
   background-position: center;
