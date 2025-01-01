@@ -20,7 +20,7 @@ body {
     overflow-x: hidden; /* 禁止水平滾動 */
     overflow-y: auto; /* 垂直滾動 */
     width: 100vw; /* 滿版寬度 */
-    padding-top: 90px; /* 頂部留空，避免內容被覆蓋 */
+    padding-top: 95px; /* 頂部留空，避免內容被覆蓋 */
 }
 
 /* 設定名稱區塊的定位 */
