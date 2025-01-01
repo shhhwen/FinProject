@@ -1,11 +1,9 @@
 * {
     padding: 0;
     margin: 0;
-
-  
   }
     
-  body {
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-image: url('../img/backgr.png'), linear-gradient(to top, #161021 0%, #402a4e 100%);
@@ -17,7 +15,6 @@
     flex-direction: column; /* 垂直布局，包括标题和内容 */
     align-items: center; /* 水平居中 */
     overflow-y: auto; /* 允许页面滚动 */
-  
 }
 
 .title{
@@ -80,8 +77,6 @@ header .icon-cart span{
 text-decoration: none;
 }
 
-
-
 .cartTab{
     width: 400px;
     background-color: #161617;
@@ -92,7 +87,6 @@ text-decoration: none;
     grid-template-rows: 70px 1fr 70px;
     transition: .5s;
     z-index: 8; /* 確保導航欄位於最上層 */
-
 }
 
 body.showCart .cartTab{
@@ -158,9 +152,11 @@ body.showCart .container{
 .listCart .item:nth-child(even){
     background-color: #eee1;
 }
+
 .listCart{
     overflow: auto;
 }
+
 .listCart::-webkit-scrollbar{
     width: 0;
 }
