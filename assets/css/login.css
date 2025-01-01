@@ -47,6 +47,7 @@ body {
 
 /* 登入/註冊區域的樣式 */
 .LogReg {
+    margin-top: -15%;
     width: 100%; /* 寬度佔滿整個頁面 */
     height: 740px; /* 高度 */
     padding-top: 180px; /* 上方內邊距 */
