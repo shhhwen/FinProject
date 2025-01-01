@@ -97,10 +97,9 @@
 }
 
 .card:hover a {
-
     color: #6b2584;
     background: #b821f3;
-    box-shadow: 0 0 10px #b821f3,0 0 10px #b821f3,0 0 40px #b821f3,0 0 80px #b821f3;
+    box-shadow: 0 0 10px #b821f3,0 0 10px #b821f3,0 0 40px #b821f3,0 0 60px #b821f3;
     transition-delay: 1s;
 } 
   
@@ -171,11 +170,11 @@
     50% { background-position: 600% 0; }
     100% { background-position: 0 0; }
   }
-  @keyframes borderScroll {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 300% 0;
-    }
-  }
+@keyframes borderScroll {
+0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: 300% 0;
+}
+}
