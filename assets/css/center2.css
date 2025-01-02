@@ -6,10 +6,6 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-header {
-    position: fixed;
-    z-index: 1000;
-}
 body {
     background-image: url('../img/backgr.png'), linear-gradient(to top, #161021 0%, #402a4e 100%);
     background-repeat: no-repeat;  

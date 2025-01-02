@@ -114,11 +114,14 @@ body.showCart .container{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 .cartTab .btn .close{
     background-color: #f5ebff;
 }
+
 
 .cartTab .listCart .item img{
     width: 100%;
